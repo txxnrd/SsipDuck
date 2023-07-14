@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 35, in script
+    p "대망의 몰입 캠프 날!!!"
+SyntaxError: unexpected EOF while parsing (<none>, line 1)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 35, in script
+    p "대망의 몰입 캠프 날!!!"
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/exports.py", line 1473, in say
+    who(what, *args, **kwargs)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/character.py", line 1332, in __call__
+    who = renpy.python.py_eval(who)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/python.py", line 1151, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/python.py", line 1088, in py_compile
+    raise e
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/python.py", line 1034, in py_compile
+    raise orig_e
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/python.py", line 1027, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: unexpected EOF while parsing (<none>, line 1)
+
+macOS-13.2.1-arm64-arm-64bit arm64
+Ren'Py 8.1.1.23060707
+kaistmossolescape 1.0
+Fri Jul 14 21:44:12 2023
