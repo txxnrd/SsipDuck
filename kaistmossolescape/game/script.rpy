@@ -1,6 +1,15 @@
 ﻿# 이 파일에 게임 스크립트를 입력합니다.
 
 # image 문을 사용해 이미지를 정의합니다.
+screen set_name(title, init_name):
+    frame:
+        xpadding 50
+        ypadding 50
+        xalign 0.5 yalign 0.5
+        vbox:
+            spacing 20
+            text title xalign 0.5
+            input default init_name xalign 0.5
 
 
 
@@ -14,10 +23,6 @@ image gpt:
     "images/gpt_chat.png"
 image blog:
     "images/howtotalktowoman.png"
-define player_name = "플레이어 이름"
-
-define p = Character("player_name",dynamic = True,color="#000000")
-
 
 
 # 여기에서부터 게임이 시작합니다.
@@ -28,14 +33,16 @@ label start:
 
     play music "a-small-miracle-132333.mp3"
 
-    $player_name = renpy.input("이름을 입력해주세요.")
-    
+    $ name = renpy.call_screen("set_name",title=" 이름을 입력해주세요. ", init_name="이름 입력칸")
+    $ p = Character( name , color="#ffffff")
     
     
     p "대망의 몰입 캠프 날!!!"
 
     p "두근두근 카이생의 모쏠 탈출기 시작합니다."
     
+    stop music
+
     jump scene2
 
     return
