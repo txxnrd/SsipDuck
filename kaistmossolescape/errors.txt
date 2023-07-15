@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 17: expected 'word' not found.
-    define 
-           ^
+File "game/script.rpy", line 89: choice menuitem expects a non-empty block.
+    "구체적으로 어떤 부탁을 하고 싶은건데?":
+                            ^
+
+File "game/script.rpy", line 104: choice menuitem expects a non-empty block.
+    "구체적으로 어떤 부탁을 하고 싶은건데?":
+                            ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Fri Jul 14 21:18:14 2023
+Sat Jul 15 15:34:27 2023
