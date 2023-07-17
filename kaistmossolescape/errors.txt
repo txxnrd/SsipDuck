@@ -2,21 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 324: expected 'label_name' not found.
-    jump scene 5
-        ^
+File "game/script.rpy", line 330: choice menuitem expects a non-empty block.
+    "나.. 나 말하는 거야? 나는 [school]에서 온 [name]이야.":
+                                              ^
 
-File "game/script.rpy", line 367: expected statement.
-    <<<<<<< HEAD
-                ^
+File "game/script.rpy", line 473: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    with dissolve
+    ^
 
-File "game/script.rpy", line 371: expected statement.
-    =======
-          ^
+File "game/script.rpy", line 500: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    with dissolve
+    ^
 
-File "game/script.rpy", line 373: expected statement.
-    >>>>>>> jh
-              ^
+File "game/script.rpy", line 562: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    scene bg_kaimaru
+    ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Mon Jul 17 15:27:39 2023
+Mon Jul 17 20:34:58 2023

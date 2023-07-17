@@ -1,4 +1,4 @@
-Mon Jul 17 17:51:27 2023
+Mon Jul 17 20:34:58 2023
 macOS-13.2.1-arm64-arm-64bit
 Ren'Py 8.1.1.23060707
  
@@ -7,31 +7,26 @@ Bootstrap to the start of init.init. took 0.02s
 Early init. took 0.00s
 Loader init. took 0.01s
 Loading error handling. took 0.02s
-Loading script. took 0.06s
+Loading script. took 0.09s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.02s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.01s
+
+File "game/script.rpy", line 330: choice menuitem expects a non-empty block.
+    "나.. 나 말하는 거야? 나는 [school]에서 온 [name]이야.":
+                                              ^
+
+File "game/script.rpy", line 473: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    with dissolve
+    ^
+
+File "game/script.rpy", line 500: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    with dissolve
+    ^
+
+File "game/script.rpy", line 562: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    scene bg_kaimaru
+    ^
 DPI scale factor: 1.000000
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
 Interface start. took 0.19s
 
 Initializing gl2 renderer:

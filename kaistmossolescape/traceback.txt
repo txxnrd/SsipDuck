@@ -1,14 +1,14 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 389, in script
+  File "game/script.rpy", line 309, in script
     d " 카이스트에도 이런 인재가 있었구나 담엔 밥 같이 먹어요"
 Exception: Sayer 'd' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 389, in script
+  File "game/script.rpy", line 309, in script
     d " 카이스트에도 이런 인재가 있었구나 담엔 밥 같이 먹어요"
   File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 890, in execute
     who = eval_who(self.who, self.who_fast)
@@ -19,4 +19,4 @@ Exception: Sayer 'd' is not defined.
 macOS-13.2.1-arm64-arm-64bit arm64
 Ren'Py 8.1.1.23060707
 kaistmossolescape 1.0
-Mon Jul 17 17:46:15 2023
+Mon Jul 17 19:17:32 2023
