@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 209: end of line expected.
-    p "당연하지...너 여태껏 컴공 다니면서 뭐햇어 너 학점 1점대야?":
-                                           ^
+File "game/script.rpy", line 324: expected 'label_name' not found.
+    jump scene 5
+        ^
+
+File "game/script.rpy", line 367: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 371: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 373: expected statement.
+    >>>>>>> jh
+              ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Mon Jul 17 14:40:18 2023
+Mon Jul 17 15:27:39 2023

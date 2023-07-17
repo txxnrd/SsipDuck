@@ -17,6 +17,15 @@ image Jihyeon = Live2D("Resources/Hiyori", base=.6, loop=True)
 
 image Natori = Live2D("Resources/natori_pro_t06", base=.6, loop=True)
 
+define config.gl2 = True
+image Hiyori = Live2D("Resources/Hiyori", base=.6, loop=True)   #짝꿍. 5번녀.. 
+image Hitomi = Live2D("Resources/Epsilon", base=.6, loop=True)  #일본인 여자. 4번녀 
+image Natori = Live2D("Resources/natori_pro_t06", base=.6, loop=True) # 남자 주인공. 
+image Kaistian = Live2D("Resources/230203 vtuber_1", base=.6, loop=True)    #카이녀, 2번녀  INTP 
+
+define j = Character("이화 여대생 ")
+define h = Character("와세다 유학생 ")
+define k = Character("카이스티안")
 
 image bg1 :
     "images/N1_bg.jpeg"
@@ -28,7 +37,35 @@ image gpt:
     "images/gpt_chat.png"
 image blog:
     "images/howtotalktowoman.png"
+
+image bg_dorm:
+    "images/bg_dorm.jpg"
+    zoom 0.88
+image bg_113computer:
+    "images/bg_113computer.jpg"
+    zoom 1.3
+image bg_room113_whole:
+    "images/bg_room113_whole.jpg"
+    zoom 1.5
+image bg_everytime:
+    "images/bg_everytime.jpg"
+image bg_kakaotalk:
+    "images/bg_kakaotalk.jpg"
+image bg_holala:
+    "images/bg_holala.jpg"
+    zoom 1.5
+image bg_kaimaru:
+    "images/bg_kaimaru.jpg"
+    zoom 1.5
+image bg_117:
+    "images/bg_117.jpg"
+
+
 image gptvideo =Movie(play="images/gptvideo.webm",size=(1120,620),loop=False,xalign=0.5,yalign=0.1)
+image kakaotalkVideo1 =Movie(play="images/video_kakaotalk1.webm",size=(800,370),loop=False,xalign=0.5,yalign=0.1)
+image kakaotalkVideo2 =Movie(play="images/video_kakaotalk2.webm",size=(800,370),loop=False,xalign=0.5,yalign=0.1)
+image everytimeVideo=Movie(play="images/video_everytime.webm",size=(800,370),loop=False,xalign=0.5,yalign=0.1)
+
 
 define config.gl2 = True
 image Jihyeon = Live2D("Resources/Hiyori", base=.6, loop=True)
@@ -47,7 +84,6 @@ define sg = Character("슬기",color="#870821")
 # 여기에서부터 게임이 시작합니다.
 label start:
     scene bg1
-    
     with fade
 
     $ name = renpy.call_screen("set_name",title=" 이름을 입력해주세요. ", init_name="이름 입력칸")
@@ -63,6 +99,7 @@ label start:
     "대망의 몰입 캠프 날!!!"
     
     "두근두근 카이생의 모쏠 탈출기 시작합니다."
+
     
     stop music
 
@@ -74,6 +111,7 @@ label scene2:
     scene bg2
 
     with fade
+
     "저기 멀리에서 짝이 보인다. 여자인듯 하다."
 
     p "짝꿍이 여자네...\n"
@@ -100,6 +138,7 @@ label .gpt:
     p "역시 gpt는 신이야."
 
     hide gptvideo with dissolve
+
     
     jump scene2_2
 
@@ -111,10 +150,12 @@ label .google:
 
     hide blog with dissolve
     
+
     jump scene2_2
 
 label scene2_2:
     with fade
+
 
 
     show Jihyeon m03 m04
@@ -174,6 +215,7 @@ label scene2_3_2:
 
 
 
+
 label scene3:
     with fade
 
@@ -207,9 +249,11 @@ label scene3:
     
     "다만 가슴 뛰는 일이 생기길 간절히 바랄 뿐이다."
 
+
 label scene4:   # 첫날, 강의실 안. 
     
     label scene4_1:
+
         
         with fade 
         
@@ -218,6 +262,7 @@ label scene4:   # 첫날, 강의실 안.
         j "Recycler View가 너무 어려워.. 너는 이거 다 이해했어?"
         menu:
             "당연하지...너 여태껏 컴공 다니면서 뭐햇어 너 학점 1점대야?":
+
                 jump .scene4_1_a
             #결과: 일주일동안 토라져서 말안하기( 오늘 저녁 같이 못먹음)
             "내가 천천히 설명 해줄게. 리사이클러 뷰는 어쩌구 저쩌구~":
@@ -225,6 +270,8 @@ label scene4:   # 첫날, 강의실 안.
             
         label .scene4_1_a:
             show Hiyori m10 
+
+
             j "나 사실 학점 1.27이야. 학고 받고 집에서 쫓겨나서 몰입캠프 온거야."
 
             j "비록 사실이라도 말을 그딴식으로 하는 사람이랑 나는 일주일동안 같이 못 지낼 거 같아."
@@ -241,22 +288,27 @@ label scene4:   # 첫날, 강의실 안.
             show Hiyori m04
             
             j " 오빠는 정말 똑똑해! \n 세상에 앨런 튜링이랑 오빠만 남는다고 해도 나는 오빠를 택할거야."
+
             hide Hiyori
             jump scene4_2
 
 
     label scene4_2:
+
+
         "리사이클러 뷰를 수정 하던 중 디테일이 부족하다는 생각을 한다."
 
         "실제 번호를 사용하면 디테일이 살지 않을까라는 생각을 한다."
         menu:
             "연락처를 물어본다":
+
                 jump scene5
             "아..아..니야 아직은 일러. 그녀와 조금 더 친해진 후 연락처를 물어봐야겠어.":
                 # 그렇게 첫날이 끝나고 기숙사로 혼자돌아갔다. 
                 # 다음날로 이동
                 jump scene6
     
+
     label scene4_3_1:
 
         p "여기 연락처 탭 부분에 너 전화번호 좀 써주라."
@@ -269,7 +321,7 @@ label scene4:   # 첫날, 강의실 안.
 
         #심장 튀어나오는 병맛 애니메이션 있으면 좋을듯.
 
-        jump scene 5
+        jump scene5
 
     
 label scene5:   #새벽 2시, 기숙사. 
@@ -285,14 +337,16 @@ label scene5:   #새벽 2시, 기숙사.
     
     #에브리타임에서 희망적인 글 발견.
     
+
     p "그녀도 나에게 관심이 있는 것 같아.\n 한 번 연락을 해봐야겠다."
     menu:
         "오늘 정신 없었을 텐데 수고 많았어. 내일 보자.":
             jump .scene5_1_a
-        
+
         "너를 처음 본 순간 나는 심장이 멎는 줄 알았어… \n 천사가 인간으로 태어났으면 너와 같은 얼굴이었을 거라 확신해 나랑 사귈래?":
             jump .scene5_1_b
         
+
         "아냐.. 아직 일러.. (아무것도 보내지 않는다)":
             jump .scene5_1_c
 
@@ -310,9 +364,9 @@ label scene5:   #새벽 2시, 기숙사.
 label scene6:
     # 술자리 회식
     scene bg_holala
-    
-    "벌써 주말이잖아. 첫 주가 어떻게 지나갔는지 모르겠네."
-    
+
+    p "벌써 주말이잖아. 첫 주가 어떻게 지나갔는지 모르겠네."
+
     j "뭐야~  여기는 몇반이에요? 3반? 나는 2반 oo 야! 뭐야~ 여기 잘생긴 오빠는 이름이 뭐야?"
     menu:
         "나.. 말하는 거야? 나는 xx대학에서 온 xx이야.":
@@ -343,8 +397,6 @@ label scene7:
 
 
 
-
-    
-
 label end:
+
 
