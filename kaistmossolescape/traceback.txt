@@ -1,28 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 19, in script
-    define p = Character(player_name, dynamic=True, color="#000000")
-  File "game/script.rpy", line 19, in <module>
-    define p = Character(player_name, dynamic=True, color="#000000")
-NameError: name 'player_name' is not defined
+  File "game/script.rpy", line 251, in script
+    d " 죄송합니다…제가 무례했네여"
+Exception: Sayer 'd' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 19, in script
-    define p = Character(player_name, dynamic=True, color="#000000")
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 2508, in execute
-    self.set()
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 2522, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
-    define p = Character(player_name, dynamic=True, color="#000000")
-NameError: name 'player_name' is not defined
+  File "game/script.rpy", line 251, in script
+    d " 죄송합니다…제가 무례했네여"
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ast.py", line 890, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ast.py", line 783, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'd' is not defined.
 
-macOS-13.2.1-arm64-arm-64bit arm64
+Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.1.23060707
 kaistmossolescape 1.0
-Sat Jul 15 14:09:53 2023
+Mon Jul 17 13:46:34 2023
