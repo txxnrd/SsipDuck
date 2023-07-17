@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 26: expected 'simple_expression' not found.
-    xalign= 0.5, yalign= 0.1
-          ^
+File "game/script.rpy", line 209: end of line expected.
+    p "당연하지...너 여태껏 컴공 다니면서 뭐햇어 너 학점 1점대야?":
+                                           ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sat Jul 15 15:28:18 2023
+Mon Jul 17 14:40:18 2023

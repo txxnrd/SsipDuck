@@ -1,28 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 19, in script
-    define p = Character(player_name, dynamic=True, color="#000000")
-  File "game/script.rpy", line 19, in <module>
-    define p = Character(player_name, dynamic=True, color="#000000")
-NameError: name 'player_name' is not defined
+  File "game/script.rpy", line 16, in script
+    image Jihyeon = Live2D("Resources/Hiyori", base=.6, loop=True)
+  File "game/script.rpy", line 16, in <module>
+    image Jihyeon = Live2D("Resources/Hiyori", base=.6, loop=True)
+Exception: Live2D model Resources/Hiyori/Hiyori.model3.json does not exist.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 19, in script
-    define p = Character(player_name, dynamic=True, color="#000000")
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 2508, in execute
-    self.set()
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 2522, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "game/script.rpy", line 16, in script
+    image Jihyeon = Live2D("Resources/Hiyori", base=.6, loop=True)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 1237, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
   File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/python.py", line 1146, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
-    define p = Character(player_name, dynamic=True, color="#000000")
-NameError: name 'player_name' is not defined
+  File "game/script.rpy", line 16, in <module>
+    image Jihyeon = Live2D("Resources/Hiyori", base=.6, loop=True)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/gl2/live2d.py", line 566, in __init__
+    common = self.create_common(default_fade)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/gl2/live2d.py", line 510, in create_common
+    rv = Live2DCommon(self.filename, default_fade)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/gl2/live2d.py", line 197, in __init__
+    raise Exception("Live2D model {} does not exist.".format(filename))
+Exception: Live2D model Resources/Hiyori/Hiyori.model3.json does not exist.
 
 macOS-13.2.1-arm64-arm-64bit arm64
 Ren'Py 8.1.1.23060707
 kaistmossolescape 1.0
-Sat Jul 15 14:09:53 2023
+Mon Jul 17 14:41:32 2023
