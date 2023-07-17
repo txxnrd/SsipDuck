@@ -135,7 +135,7 @@ label .gpt:
     
     p "gpt야 도와줘!!" 
     
-    p "역시 gpt는 신이야."
+    p "gpt가 하라는 대로만 해야겠다."
 
     hide gptvideo with dissolve
 
@@ -146,7 +146,7 @@ label .google:
     show blog at top
     p "구글은 알겠지?"
 
-    p "구글은 신이야"
+    p "역시 고수는 달라...이 블로그 N회독 해야겟다."
 
     hide blog with dissolve
     
@@ -174,7 +174,11 @@ label scene2_2:
     menu: 
         "초반부터 너무 잘해주면 별로겠지?":
             stop music
-            p "너가 직접 코딩해보고 판단해!왜 부탁을 해\n 나는 너가 줏대 있는 인간이었으면 좋겟어."
+
+            p "한 주 동안 잘 부탁한다니 뭘 부탁을 해..."
+
+            p "너가 직접 코딩해보고 판단해! 나는 너가 줏대 있는 인간이었으면 좋겟어."
+            
             jump scene2_3_1    
         "최대한 친절하게 대하자!":
             p "그..그래 나..도 잘 부탁해~"
