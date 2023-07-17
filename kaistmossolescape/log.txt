@@ -74,3 +74,7 @@ Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(3024, 1890)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1512, 945) drawable=(3024, 1890)
 Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1512, 945) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
