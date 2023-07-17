@@ -69,8 +69,13 @@ image bg_taepungso:
     zoom 1.3
 image bg_117:
     "images/bg_117.jpg"
-
-
+image nameofSprite:
+    "soju-straight.png"
+    0.5 #this part defines how long to wait before next frame
+    "soju-not_straight.png"
+    0.5
+    repeat
+    
 image gptvideo =Movie(play="images/gptvideo.webm",size=(1120,620),loop=False,xalign=0.5,yalign=0.1)
 image kakaotalkVideo1 =Movie(play="images/video_kakaotalk1.webm",size=(900,400),loop=False,xalign=0.5,yalign=0.1)
 image kakaotalkVideo2 =Movie(play="images/video_kakaotalk2.webm",size=(900,400),loop=False,xalign=0.5,yalign=0.1)
@@ -308,18 +313,14 @@ label scene6:
     p "벌써 주말이잖아. 첫 주가 어떻게 지나갔는지 모르겠네."
 
 
-    image nameofSprite:
-        "soju-straight.png"
-        0.5 #this part defines how long to wait before next frame
-        "soju-not_straight.png"
-        0.5
-        repeat
-
+    show soju at truecenter
 
     "사람들의 대화와 웃음이 점차 풍성해져간다."
 
     "그러던 중 인싸 향기를 내뿜는 한 여성이 내게 다가온다."
-   
+
+    hide soju
+    
     n "안녕!나는 파워 E N F P 대장 박나경!"
    
     n " 여기는 몇반이야? 3반? 나는 2반 나경이야!"
