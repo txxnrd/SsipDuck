@@ -1,4 +1,4 @@
-Mon Jul 17 16:06:37 2023
+Mon Jul 17 17:51:27 2023
 macOS-13.2.1-arm64-arm-64bit
 Ren'Py 8.1.1.23060707
  
@@ -32,7 +32,7 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.24s
+Interface start. took 0.19s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1512, 982)

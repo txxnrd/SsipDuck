@@ -23,6 +23,15 @@ image Hitomi = Live2D("Resources/Epsilon", base=.6, loop=True)  #일본인 여�
 image Natori = Live2D("Resources/natori_pro_t06", base=.6, loop=True) # 남자 주인공. 
 image Kaistian = Live2D("Resources/230203 vtuber_1", base=.6, loop=True)    #카이녀, 2번녀  INTP 
 
+image soju:
+    "soju-straight.png"
+    0.5
+    "soju-not_straight.png"
+    0.5
+
+    repeat
+
+
 define j = Character("이화 여대생 ")
 define h = Character("와세다 유학생 ")
 define k = Character("카이스티안")
@@ -181,7 +190,7 @@ label scene2_2:
             
             jump scene2_3_1    
         "최대한 친절하게 대하자!":
-            p "그..그래 나..도 잘 부탁해~"
+            p "그래 나도 잘 부탁해"
             jump scene2_3_2
             # 말풍선 띄우고, toast로 호감도 하락. 
 label scene2_3_1:
@@ -370,6 +379,9 @@ label scene6:
     scene bg_holala
 
     p "벌써 주말이잖아. 첫 주가 어떻게 지나갔는지 모르겠네."
+
+    p "오늘은 술 신나게 마셔야지"
+    show soju at truecenter
 
     j "뭐야~  여기는 몇반이에요? 3반? 나는 2반 oo 야! 뭐야~ 여기 잘생긴 오빠는 이름이 뭐야?"
     menu:
