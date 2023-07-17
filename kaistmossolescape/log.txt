@@ -1,4 +1,4 @@
-Mon Jul 17 22:10:09 2023
+Mon Jul 17 22:23:44 2023
 macOS-13.2.1-arm64-arm-64bit
 Ren'Py 8.1.1.23060707
  
@@ -7,12 +7,68 @@ Bootstrap to the start of init.init. took 0.02s
 Early init. took 0.00s
 Loader init. took 0.01s
 Loading error handling. took 0.02s
-Loading script. took 0.09s
+Loading script. took 0.14s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
 
-File "game/script.rpy", line 324: expected 'simple_expression' not found.
-    hide image
+File "game/script.rpy", line 72: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 75: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 77: expected statement.
+    >>>>>>> jh
+              ^
+
+File "game/script.rpy", line 83: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 86: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 88: expected statement.
+    >>>>>>> jh
+              ^
+
+File "game/script.rpy", line 326: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 328: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 329: expected statement.
+    >>>>>>> jh
+              ^
+
+File "game/script.rpy", line 419: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 421: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 422: expected statement.
+    >>>>>>> jh
+              ^
+
+File "game/script.rpy", line 490: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 493: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 494: expected statement.
+    >>>>>>> jh
               ^
 DPI scale factor: 1.000000
 Interface start. took 0.21s
@@ -28,14 +84,404 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 165.49s
+Bootstrap to the start of init.init. took 48.23s
 Early init. took 0.00s
-Loader init. took 0.02s
+Loader init. took 0.01s
 Loading error handling. took 0.02s
 Loading script. took 0.08s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
-Running init code. took 0.04s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+    label scene9_2:
+and File "game/script.rpy", line 659:
+    label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 609:
+label scene10:
+and File "game/script.rpy", line 668:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 613:
+label scene11:
+and File "game/script.rpy", line 672:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 51.38s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.04s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+    label scene9_2:
+and File "game/script.rpy", line 659:
+    label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 609:
+label scene10:
+and File "game/script.rpy", line 668:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 613:
+label scene11:
+and File "game/script.rpy", line 672:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 51.94s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.04s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+    label scene9_2:
+and File "game/script.rpy", line 659:
+    label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 609:
+label scene10:
+and File "game/script.rpy", line 668:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 613:
+label scene11:
+and File "game/script.rpy", line 672:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 74.98s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.07s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+label scene9_2:
+and File "game/script.rpy", line 660:
+    label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 610:
+label scene10:
+and File "game/script.rpy", line 669:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 614:
+label scene11:
+and File "game/script.rpy", line 673:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 75.45s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.04s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+label scene9_2:
+and File "game/script.rpy", line 660:
+    label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 610:
+label scene10:
+and File "game/script.rpy", line 669:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 614:
+label scene11:
+and File "game/script.rpy", line 673:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 75.99s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.04s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+label scene9_2:
+and File "game/script.rpy", line 660:
+    label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 610:
+label scene10:
+and File "game/script.rpy", line 669:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 614:
+label scene11:
+and File "game/script.rpy", line 673:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 76.44s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.04s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+label scene9_2:
+and File "game/script.rpy", line 660:
+    label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 610:
+label scene10:
+and File "game/script.rpy", line 669:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 614:
+label scene11:
+and File "game/script.rpy", line 673:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 88.20s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.07s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+label scene9_2:
+and File "game/script.rpy", line 660:
+label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 610:
+label scene10:
+and File "game/script.rpy", line 670:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 614:
+label scene11:
+and File "game/script.rpy", line 674:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 88.75s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.04s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+label scene9_2:
+and File "game/script.rpy", line 660:
+label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 610:
+label scene10:
+and File "game/script.rpy", line 670:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 614:
+label scene11:
+and File "game/script.rpy", line 674:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 89.21s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.04s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
+label scene9_2:
+and File "game/script.rpy", line 660:
+label scene9_2:
+
+
+The label scene10 is defined twice, at File "game/script.rpy", line 610:
+label scene10:
+and File "game/script.rpy", line 670:
+label scene10:
+
+
+The label scene11 is defined twice, at File "game/script.rpy", line 614:
+label scene11:
+and File "game/script.rpy", line 674:
+label scene11:
+
+DPI scale factor: 1.000000
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1 Pro'
+Version: b'2.1 Metal - 83'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 121.24s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.06s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
 Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.01s
@@ -44,7 +490,7 @@ Backing up script files to '/Users/taeyunroh/Library/RenPy/backups/kaistmossoles
 Dump and make backups. took 0.02s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.01s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
@@ -68,13 +514,5 @@ Vendor: "b'Apple'"
 Renderer: b'Apple M1 Pro'
 Version: b'2.1 Metal - 83'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(3024, 1890)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1512, 945) drawable=(3024, 1890)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1512, 945) drawable=(2820, 1586)
-Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1410, 793) drawable=(2820, 1586)
 Maximum texture size: 4096x4096
