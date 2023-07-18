@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 793: expected ':' not found.
-    label scene12
-                 ^
+File "game/script.rpy", line 954: expected menuitem
+    hide soju
+    ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Tue Jul 18 16:24:08 2023
+Tue Jul 18 19:06:03 2023

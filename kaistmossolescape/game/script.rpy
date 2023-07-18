@@ -78,11 +78,11 @@ image bg_zakyo:
 
 image bg_china_out:
     "images/china_out.jpeg"
-    zoom 0.8
+    zoom 0.92
 
 image bg_china_in:
     "images/china_in.jpeg"
-    zoom 0.8
+    zoom 0.92
 
 image soju:
     "soju-straight.png"
@@ -795,7 +795,7 @@ label scene11:
         p "미안, 나경아. 약속이 있어서 안될 것 같아. 다음에 보자."
         
         p "카톡창에 1이 사라졌지만 그녀의 답은 없었다."
-        jump scene14_b
+        jump scene13_b
 
     label scene11_3:
         stop music
@@ -836,7 +836,7 @@ label scene12:
     
     "나는 그녀를 바라보며 답변했다."
 
-    play music "sojudump.mp3"
+    play music "waitforans.mp3"
     menu:
         "너의 눈에 나만 보이듯, 내 눈에도 너만 보여.":
             jump scene12_1_a
@@ -845,6 +845,8 @@ label scene12:
 
     label scene12_1_a:
         stop music
+        
+        play music "sojudump.mp3"
 
         p "'너의 눈에 나만 보이듯, 내 눈에도 너만 보여.'"
         "나의 대답에 나경은 눈이 크게 벌어지며 놀라워했다."
@@ -854,6 +856,8 @@ label scene12:
         play music "happyending.mp3"
         #엔딩 추가하기
         hide Nakyeong
+
+        jump end5
 
     label scene12_1_b:
         stop music
@@ -918,7 +922,27 @@ label scene13:
         "그 이후로 나는 지현이의 집중하는 뒷모습 만을 보았다."
         
         jump end3
-        
+
+label scene13_b:
+    # 실습실
+    scene bg_room113_whole
+    "나경이의 제안을 거절하고 어색한 상태로 실습실에 도착했다."
+    
+    "실습실에 도착하니 팀메이트인 지현이 혼자 코딩을 하고 있었다."
+    
+    p "지현아, 잘하고 있었어?"
+
+    j "혼자 하느라고 힘들었지."
+    
+    "나경이랑 이야기하면서, 나는 확신이 들었다."
+    
+    "나는 지현을 좋아하고 있었다는 것..."
+
+    show Jihyeon m03 m04
+    j "오빠 오늘은 빨리하고 술 먹는 거 어때?"
+
+    p "엉 너무 좋지."
+
 label scene14:
     scene bg_china_out
     show Jihyeon m03 m04
@@ -929,11 +953,13 @@ label scene14:
 
     scene bg_china_in
 
-    " 뱉은 말과 달리 밤샘 코딩에 지친 우리는 소주를 미친듯이 들이 부었다."
-    show soju
+    "뱉은 말과 달리 밤샘 코딩에 지친 우리는 소주를 미친듯이 들이 부었다."
+    show soju at truecenter
 
 
     j "오빠랑 둘이서 술 먹으니 너무 좋다."
+    
+    hide soju
 
     p "나도 너랑 있으니 너무 좋아."
     
@@ -949,9 +975,11 @@ label scene14:
 
     "그녀에게 행동을 취한다."
 
+    
+
     play music "waitforans.mp3"
     menu:
-        hide soju
+        
         "박력 있게 벽치기를 한다.":
             "아뿔싸! 벽이 무너진다."
             jump end4
@@ -973,7 +1001,7 @@ label end3:
     "그렇게 나는 굴러들어온 지현이를 걷어찼다. "
 
 label end4:
-    "샤오차이나의 벽은 굉장히 약했다. 지현이와 나는 서둘러 응급실에 실려간다.."
+    "샤오차이나의 벽은 굉장히 약했다. \n 부상을 입은 지현이와 나는 서둘러 응급실에 실려간다.."
 
 label end5:
     "Happy Ending!!"
