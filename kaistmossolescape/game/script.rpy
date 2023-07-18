@@ -24,6 +24,7 @@ image Hiyori = Live2D("Resources/Hiyori", base=.6, loop=True)   #짝꿍. 5번녀
 image Hitomi = Live2D("Resources/Epsilon", base=.6, loop=True)  #일본인 여자. 4번녀 
 image Natori = Live2D("Resources/natori_pro_t06", base=.6, loop=True) # 남자 주인공. 
 image Kaistian = Live2D("Resources/230203 vtuber_1", base=.6, loop=True)    #카이녀, 2번녀  INTP 
+image Nakyeong = Live2D("Resources/RACOON01", base=.6, loop=True)
 
 define j = Character("지현",color="#e38634")
 
@@ -34,6 +35,8 @@ define h = Character("히토미",color="#f73bbe")
 define sy = Character("시연",color="#2b69e5")
 
 define sg = Character("슬기",color="#870821")
+
+
 
 # 이미지, 동영상 저장하기  
 image bg1 :
@@ -46,9 +49,8 @@ image gpt:
     "images/gpt_chat.png"
 image blog:
     "images/howtotalktowoman.png"
-image kaist_night:
-    "images/kaist_night.jpeg"
-
+image kaist_nightwalk:
+    "images/bg_nightwalk.jpg"
 image bg_dorm:
     "images/bg_dorm.jpg"
     zoom 1.4
@@ -69,13 +71,18 @@ image bg_taepungso:
     zoom 1.3
 image bg_117:
     "images/bg_117.jpg"
-image nameofSprite:
+image bg_zakyo:
+    "images/bg_zakyo.jpg"
+    zoom 1.4
+image soju:
     "soju-straight.png"
     0.5 #this part defines how long to wait before next frame
     "soju-not_straight.png"
     0.5
     repeat
-    
+
+
+
 image gptvideo =Movie(play="images/gptvideo.webm",size=(1120,620),loop=False,xalign=0.5,yalign=0.1)
 image kakaotalkVideo1 =Movie(play="images/video_kakaotalk1.webm",size=(900,400),loop=False,xalign=0.5,yalign=0.1)
 image kakaotalkVideo2 =Movie(play="images/video_kakaotalk2.webm",size=(900,400),loop=False,xalign=0.5,yalign=0.1)
@@ -99,9 +106,7 @@ label start:
     
     "대망의 몰입 캠프 날!!!"
     
-    "두근두근 [school] 모쏠 탈출기 시작합니다."
-
-    
+    "두근두근 [school] 모쏠 탈출기 시작합니다."   
 
     stop music
 
@@ -303,7 +308,7 @@ label scene5_1_b:
     jump end2
  
         
-    
+
 
 
 label scene6:
@@ -316,11 +321,10 @@ label scene6:
     show soju at truecenter
 
     "사람들의 대화와 웃음이 점차 풍성해져간다."
-
     "그러던 중 인싸 향기를 내뿜는 한 여성이 내게 다가온다."
-
     hide soju
-    
+
+    show Nakyeong at top
     n "안녕!나는 파워 E N F P 대장 박나경!"
    
     n " 여기는 몇반이야? 3반? 나는 2반 나경이야!"
@@ -329,17 +333,19 @@ label scene6:
     menu:
         "나.. 나 말하는 거야? 나는 [school]에서 온 [name]이야.":
             n  "[school]에도 이런 인재가 있었구나~! 담엔 밥 같이 먹어요ㅎㅎ"
+            hide Nakyeong
             jump scene6_1
     
         "저는 [name]입니다만, 초면인데 왜. 반말 하시죠? ":
+           
             n " 죄송합니다…제가 무례했네여"
             "갑자기 분위기가 싸해지고, 정적이 흘렀다.."
+            hide Nakyeong
             jump scene6_1
 
     label scene6_1:
         
-        "하하, 술게임이나 해볼까요~"
-    
+        "하하, 술게임이나 해볼까요~"    
         "술게임을 시작하며 분위기가 더욱 즐거워지고, 다시 한번 웃음소리가 채워졌다."
 
 
@@ -456,7 +462,7 @@ label scene8:
     show Hitomi m_04
     with dissolve
 
-    #scene kaist_night
+    scene kaist_nightwalk
 
     "국밥을 먹은 후 우리는 함께 기숙사로 향했다."
     
@@ -623,19 +629,101 @@ label scene11:
             jump scene11_3
 
     label scene11_1:
-        p "나는 나경에게 답했다."
-        p "'그래, 좋아. 그런데 지현이도 같이 오면 어떨까?'"
-        p "이렇게 말하니 나경이는 조금 놀란 표정을 짓더니 금방 웃음을 내비쳤다."
-
+        "나는 나경에게 답했다."
+        p "그래, 좋아. 그런데 내 팀메도 같이 오면 어떨까?"
+        n "이렇게 답하니 나경이로부터  1시간  이후 답변이 왔다."
+        n "아냐, 그럴거면 나는 빠질게."
+        p "당황한 나는 다시 카톡을 보내보았지만,  \n 이미 차단 당한 이후였다."
+        jump scene14_a
     label scene11_2:
         p "나는 조금 죄책감이 들었다."
-        p "'미안, 나경아. 이미 지현이와 약속이 있어서 못갈 것 같아. 다음에 보자.'"
-        p "나의 거절에도 불구하고, 나경은 이해해주는 듯이 대답했다."
+        p "미안, 나경아. 이미 지현이와 약속이 있어서 못갈 것 같아. 다음에 보자."
+        p "나경은 나의 문자를 본 것듯이 대답했다."
+        jump scene14_b
 
     label scene11_3:
         p "나는 지현이에게 미안한 마음이 들었지만, 나경과의 저녁식사를 수락했다."
-        p "'그래, 나경아. 좋아. 저녁에 보자.'"
-        n " 나경은 자신이 맛있는 식당을 알아뒀다며 저녁에 만나자고 했다. '"
+        p "그래, 나경아. 좋아. 저녁에 보자."
+        n " 나경은 자신이 맛있는 식당을 알아뒀다며 저녁에 만나자고 했다. "
+        jump scene12
+
+label scene12
+    # 작교
+    scene bg_zakyo
+    p "나경이가 엄선한 유성 제일가는 술집 '작교'에 도착했다."
+    p "분위기도 좋고, 막걸리의 맛도 최고였다."
+    
+    show Nakyeong
+    p "나경은 막걸리 한병을 벌컥벌컥 들이키며 얼굴이 붉어지는 것을 느꼈다."
+    p "그리고 그녀는, 그간 자신이 가슴 속에 숨겨온 이야기를 시작했다."
+
+    n "사실, 처음 보았을 때부터 내 이상형이다 싶었어."
+    n "내 이상형은 순수한 공대 너드남인데, 너가 딱 그런 느낌이었어."
+
+    p "나는 그 말을 듣고 놀랐다."
+    p "나경이가 나를 그런 눈으로 보고 있었다니, 그것을 알기까지 오래 걸렸다."
+    p "나는 그녀를 바라보며 답변했다."
+
+    menu:
+        "나도 너를 그런 눈으로 봤어, 나경아.":
+            jump scene12_1_a
+        "그 말, 고마워. 나도 좋아하는 사람이 있어.":
+            jump scene12_1_b
+
+    label scene12_1_a:
+
+        p "'나도 너를 그런 눈으로 봤어, 나경아.'"
+        "나의 대답에 나경은 눈이 크게 벌어지며 놀라워했다."
+        n "그리고 그녀는 미소를 지으며, '정말이야? 그건 너무 좋다.'라고 말했다."
+        n "우리, 만나 보지 않을래? " # 해피 엔딩. 
+        hide Nakyeong
+
+    label scene12_1_b:
+        
+        p "그 말, 고마워. 나도 좋아하는 사람이 있어."
+        p "나의 대답에 나경은 조금 서운한 듯이 고개를 숙였다."
+        p "그리고는, '그래도 나는 네가 좋아. 그런 너를 지켜보는 것만으로도 충분해.'라고 말했다."
+        hide Nakyeong
+        jump scene13
+
+label scene13:
+    # 실습실
+    scene bg_room113_whole
+    "나경과의 고백을 거절하고 어색한 상태로 실습실에 도착했다."
+    "나는 그녀를 거절한 행동에 대해 미안함을 느꼈다. 그녀는 나에게 감정을 표현했지만, 나는 그것을 받아들이지 못했다."
+    "실습실에 도착하니 팀메이트인 지현이 혼자 코딩을 하고 있었다."
+    p "지현아, 저녁 혼자 먹게 해서 정말 미안하다."
+    p "나경과 이야기하면서, 나는 지현을 좋아하고 있었다는 것을 깨달았다."
+
+    show Jihyeon m03 m04
+    j "오빠, 밥은 맛있게 먹고 왔어?"
+
+    menu:
+        "아니, 자꾸 네 생각이 나서, 빨리 네가 보고 싶어서 먹는 둥 마는 둥 하고 왔어.":
+            jump scene13_1_a
+        "응 작교 다녀왔는데 맛있더라.":
+            jump scene13_1_b
+
+    label scene13_1_a:
+        p "아니, 자꾸 네 생각이 나서, 빨리 네가 보고 싶어서 먹는 둥 마는 둥 하고 왔어."
+        "나의 대답에 지현이는 놀라 보였다."
+        j"그래서 그렇게 빨리 돌아온 거였구나."
+        j "나랑도 가주면 안될까?"
+        jump scene14
+
+    label scene13_1_b:
+        p "응, 작교 다녀왔는데 맛있더라."
+        "나의 대답에 지현이는 아무 대답 없이 코딩에 집중하더니,"
+        "그 이후로 나는 지현이의 말하는 모습을 다시는 볼 수 없었다"
+        jump end3
+        
+label scene14_a:
+
+label scene14_b:
+
+label scene14_c:
+
+
 
 
 
@@ -643,3 +731,5 @@ label end1:
     "그렇게 나는 일주일간 그녀와 아무 말도 할 수 없었고, \n 몰입캠프 전체에  인신공격남으로 소문나게 되어 \n 괴로운 한달을 보내야 했다…"
 label end2:
     "그렇게 나는 일주일간 그녀와 아무 말도 할 수 없었고, \n 몰입캠프 전체에  급발진남으로 소문나게 되어 \n 괴로운 한달을 보내야 했다…"
+label end3:
+    "그렇게 나는 굴러들어온 지현이를 걷어찼다. "
