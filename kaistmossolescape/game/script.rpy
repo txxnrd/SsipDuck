@@ -62,7 +62,7 @@ image bg_holala:
     "images/bg_holala.jpg"
     zoom 1.5
 image bg_kaimaru:
-    "images/bg_kaimaru.jpg"
+    "images/bg_kaimaru.jpeg"
     zoom 1.5
 image bg_taepungso:
     "images/bg_taepungso.jpg"
@@ -115,13 +115,30 @@ label scene2:
     scene bg2
     with fade
 
+
+    show Natori mtn_01 exp_03 with dissolve
     "저기 멀리에서 짝이 보인다. 여자인듯 하다." # 지현이 작게 넣기
-    p "짝꿍이 여자네...\n"
-    p "초등학교 이후로 여자랑 말을 해본 적이 없는데..."
-    p "말은 어떻게 건네야 하지?"
+    
+    play music "spooky&sad.mp3"
+
+    p "아니...짝꿍이 여자야...\n"
+
+    p "여자랑 말을 어떻게 해..미리 말 해주던가 몰캠 놈들..."
+    
+    p "생각해보니 초등학교 이후로 여자랑 말을 해본 적이 없잖아"
+    
+    p "온몸이 떨리고 갑자기 집에 가고 싶어졌어."
+
+    stop music
+    hide Natori
+    
+    play music "waitforans.mp3"
 
 menu :
+
+    
     "행동을 결정하시오"
+    
     "gpt에게 물어보기":
         jump .gpt    
     "구글링하기":
@@ -129,6 +146,7 @@ menu :
     
 
 label .gpt:
+    stop music
     show gptvideo
     
     p "gpt야 도와줘!!" 
@@ -141,6 +159,8 @@ label .gpt:
     jump scene2_2
 
 label .google:
+
+    stop music
     show blog at top
     p "구글은 알겠지?"
 
@@ -196,26 +216,43 @@ label scene2_3_2:
 label scene3:
     with fade
     scene bg_room113_whole
+    play music  "05. Getting Ready Now!.mp3" 
 
     "여학생들이 하나 둘 도착하기 시작했다. 나는 조용히 관찰했다."
+    
     "카이스트 여학생이 멋쩍게 머리를 쳐다보며 소리내어 인사했다."
 
+    
     show Kaistian
+    
     sy "안녕하세요, 제 이름은 시연입니다. 앞으로 한 주 동안 잘 부탁드려요."
+    
     "그녀는 몹시 츤데레 같은 성격을 가진 것처럼 보였다."
+    
     "다소 냉담하고 거만스러워 보였지만, \n 가끔씩 보여주는 부끄러움이 그녀를 더욱 매력적으로 보이게 했다."
+    
     hide Kaistian with dissolve
 
     "일본에서 온 유학생, 히토미가 소개를 시작했다."
+    
     show Hitomi m_01 
+    
     with dissolve
+    
     h "콘니치와, 와세다 대학교에서 왔습니다.\n 한국어가 아직 서툴러서 잘 못하더라도 이해해 주세요." 
+    
     "그녀의 말투는 약간 어색했지만, \n그것이 오히려 그녀의 매력을 더욱 부각시켰다."
+    
     hide Hitomi
     
+    
     "이렇게 첫 분반 회의가 시작되었다."    
+    
     "그들과 함께 하는 동안 어떤 일들이 일어날지는 아직 아무도 모른다."    
+    
     "다만 가슴 뛰는 일이 생기길 간절히 바랄 뿐이다."
+
+    stop music
 
 
 label scene4:   # 첫날, 강의실 안. 
@@ -227,7 +264,9 @@ label scene4:   # 첫날, 강의실 안.
         show Hiyori m04
         j "Recycler View가 너무 어려워.. 너는 이거 다 이해했어?"
 
+        play music "waitforans.mp3"
         menu:
+            
             "당연하지...너 여태껏 컴공 다니면서 뭐햇어 너 학점 1점대야?":
                 jump .scene4_1_a
             #결과: 일주일동안 토라져서 말안하기( 오늘 저녁 같이 못먹음)
@@ -235,13 +274,17 @@ label scene4:   # 첫날, 강의실 안.
                 jump .scene4_1_b
             
         label .scene4_1_a:
+            stop music
             j "나 사실 학점 1.27이야. 학고 받고 집에서 쫓겨나서 몰입캠프 온거야."
-            j "비록 사실이라도 말을 그딴식으로 하는 사람이랑 나는 일주일동안 같이 못 지낼 거 같아."
+            j "비록 사실이라도 말을 그딴식으로 하는 사람이랑 나는 일주일 동안 같이 못 지낼 거 같아."
             j "넌 탈락이야!"
+
+            play music "spooky&sad.mp3"
             hide Hiyori
             jump end1
 
-        label .scene4_1_b:            
+        label .scene4_1_b:  
+            stop music          
             "개발이 익숙했던 [name]. 1분만에 화면에 연락처 탭을 구현한다."            
             j " 오빠는 정말 똑똑해! \n 세상에 앨런 튜링이랑 오빠만 남는다고 해도 나는 오빠를 택할거야."
 
@@ -250,8 +293,10 @@ label scene4:   # 첫날, 강의실 안.
 
 
     label scene4_2:
+        play music "littletension.mp3"
         "리사이클러 뷰를 수정 하던 중 디테일이 부족하다는 생각을 한다."
-        "실제 번호를 사용하면 디테일이 살지 않을까라는 생각을 한다."
+        
+        "'실제 번호를 사용하면 디테일이 살지 않을까'라는 생각을 한다."
         menu:
             "연락처를 물어본다":
                 jump scene4_3_1
@@ -262,6 +307,7 @@ label scene4:   # 첫날, 강의실 안.
     
 
     label scene4_3_1:
+
         show Hiyori m01 m07 m06
 
         p "여기 연락처 탭 부분에 너 전화번호 좀 써주라."        
@@ -269,6 +315,9 @@ label scene4:   # 첫날, 강의실 안.
         j "그래도 오빠니까 특별히 줄게. 연락 자주하자"
         "방금 그녀가 나한테 연락을 자주하자고 했다...\n심장이 마구 요동친다..이게 사랑인가?"
         #심장 튀어나오는 병맛 애니메이션 있으면 좋을듯.
+
+        stop music
+        
         jump scene5
 
     
@@ -276,30 +325,37 @@ label scene5:   #새벽 2시, 기숙사.
     with fade 
     scene bg_dorm  
         
-    p "나랑 만나는 게 행운이라고 했어. 그녀도 나와 같은 마음인 걸까?"
+    p "이 정도면 그린라이트겠지? 사람들한테 물어봐야겠다."
+
     $ renpy.movie_cutscene("images/video_everytime.webm", delay=None, loops=0, stop_music=True)
-    p "그녀도 나에게 관심이 있는 것 같아.\n 한 번 연락을 해봐야겠다."
+    
+    p "그녀도 분명 나에게 관심이 있을 거야.얼른 연락을 해야겠다."
+    
+    play music "15. Bird Songs.mp3"
 
     menu:
-        "오늘 정신 없었을 텐데 수고 많았어. 내일 보자.":
+        "오늘 정신 없었을 텐데 고생 많았어ㅎㅎ. 내일 보자.":
             jump scene5_1_a
 
         "너를 처음 본 순간 나는 심장이 멎는 줄 알았어… \n 천사가 인간으로 태어났으면 너와 같은 얼굴이었을 거라 확신해 나랑 사귈래?":
             jump scene5_1_b
 
         "아냐.. 아직 일러.. (아무것도 보내지 않는다)":
+            
             jump scene6
 
 label scene5_1_a:
     $ renpy.movie_cutscene("images/video_kakaotalk1.webm", delay=None, loops=0, stop_music=True)
     p "그녀와 조금 더 가까워진 기분이 드는 걸 "
-    p "내일은 그녀에게 조금더 적극적으로 다가가봐야지 "
+    p "내일은 그녀에게 조금 더 적극적으로 다가가봐야지 "
+    stop music
     jump scene6
     
 label scene5_1_b:
     $ renpy.movie_cutscene("images/video_kakaotalk2.webm", delay=None, loops=0, stop_music=True)
     p "그러자 그녀에게서 연락이 왔다."
     p "설레는 마음으로 카톡창을 열자.."
+    stop music
     show Jihyeon m07 m08 m09
     j "너무 당황스러워!\n 다시는 개인적인 일로 연락하지마!"
     jump end2
@@ -309,8 +365,12 @@ label scene5_1_b:
 
 
 label scene6:
+    stop music
+
     # 술자리 회식
     scene bg_holala
+
+    play music "sojudump.mp3"
 
     p "벌써 주말이잖아. 첫 주가 어떻게 지나갔는지 모르겠네."
 
@@ -322,12 +382,17 @@ label scene6:
     "그러던 중 인싸 향기를 내뿜는 한 여성이 내게 다가온다."
 
     hide soju
-    
+
+
+    stop music
+
     n "안녕!나는 파워 E N F P 대장 박나경!"
    
     n " 여기는 몇반이야? 3반? 나는 2반 나경이야!"
     
     n "이 귀요미는 이름이 뭐야?"
+
+    play music "waitforans.mp3"
     menu:
         "나.. 나 말하는 거야? 나는 [school]에서 온 [name]이야.":
             n  "[school]에도 이런 인재가 있었구나~! 담엔 밥 같이 먹어요ㅎㅎ"
@@ -339,7 +404,10 @@ label scene6:
             jump scene6_1
 
     label scene6_1:
-        
+        stop music
+
+        play music "sojudump.mp3"
+
         "하하, 술게임이나 해볼까요~"
     
         "술게임을 시작하며 분위기가 더욱 즐거워지고, \n다시 한번 웃음소리가 채워졌다."
@@ -358,6 +426,7 @@ label scene6:
         
 
 label scene6_1_a:
+    stop music
     hide Hitomi 
     show Hitomi m_05
     h "헤에- 오나짱, 대단하네요~ \n 구해주셔서 고마워요."
@@ -367,6 +436,8 @@ label scene6_1_a:
     h "새벼크에 소주르을 먹으면 \n 태평소를 가는게 국크룰이라던데 같이 가고 싶어요."
     
     h "조금만 이따가 오나짱과 함께 TPS에 가볼 수 있을까요..?"
+    play music "waitforans.mp3"
+
     menu:
         
         "국밥 한 그릇 먹고 가면 속도 풀리고 아주 좋지.":
@@ -376,6 +447,8 @@ label scene6_1_a:
 
 
 label scene6_1_b:
+    
+    stop music
     hide Hitomi 
     show Hitomi m_05
     h "오나짱 나 술이 좀 취한 거 같아요."
@@ -385,6 +458,9 @@ label scene6_1_b:
     h "그래서 말인데..\n 새벼크에 소주르을 먹으면 태평소를 가는게 국크룰이라던데 \n 같이 가고 싶어요."
     
     h "조금만 이따가 오나짱과 함께 TPS에 가볼 수 있을까요..?"
+    
+    play music "waitforans.mp3"
+
     menu:
         
         "국밥 한 그릇 먹고 가면 속도 풀리고 아주 좋지.":
@@ -395,10 +471,13 @@ label scene6_1_b:
 
 
 label scene7:
+    stop music
     # 태평소 국밥
     scene bg_taepungso
     hide Hitomi 
     show Hitomi m_07 m_08
+
+    play music "audio/a-small-miracle-132333.mp3" 
     
     "히토미와 함께 국밥집으로 걸어갔다."
     "그녀는 술을 마시고 약간 부어 있는 얼굴이었지만, 그런 그녀도 매력적이었다."
@@ -407,7 +486,7 @@ label scene7:
 
     show Hitomi m_03
 
-    h "국밥 먹은 게 처음이라서 기대되요~"
+    h "국밥 먹은 게 처음이라서 너무 신나요~"
 
     "그녀의 신나는 표정을 보고, 나도 미소를 지을 수밖에 없었다."
 
@@ -429,6 +508,10 @@ label scene7:
     
     "입에 묻은 김치를 알아채지도 못한채 \n 그녀는 고스란히 두고 먹는 것을 즐기고 있었다."
 
+    stop music
+
+    play music "waitforans.mp3"
+
 menu:
     "김치를 떼어주려는 충동을 억제하며, 그녀에게 알려준다.":
         
@@ -439,6 +522,7 @@ menu:
         jump scene7_b
 
 label scene7_a:
+    stop music
     p "히토미, 입가에 김치가 묻어 있어."
     
     h "어머! 알려주셔서 고마워요. 민망하네요."
@@ -446,6 +530,8 @@ label scene7_a:
     "그녀는 쑥스럽게 웃으며 김치를 닦아냈다."
 
 label scene7_b:
+    stop music
+    
     "그녀의 입가에 묻은 김치를 볼 수 없어서, 나는 조용히 휴지를 꺼냈다."
     
     p "잠깐만, 히토미."
@@ -458,6 +544,9 @@ label scene7_b:
 
 
 label scene8:
+    stop music
+    play music "happiest_ever.mp3"
+
     show Hitomi m_04
     with dissolve
 
@@ -467,11 +556,11 @@ label scene8:
     
     h "오늘 정말 즐거웠어요. 오나짱과 함께 하니까 뭔가 더 신나요."
     
-    "그녀의 얼굴에는 술이 올라와서인지, 혹은 기분이 좋아서인지 미소가 넘쳐흘렀다."
+    "그녀의 얼굴에는 술이 올라와서인지, \n혹은 기분이 좋아서인지 미소가 넘쳐흘렀다."
 
-    "평소에도 그녀가 예쁘다 생각했지만, 취기가 오른 그녀의 모습은 나를 더욱 설레게 하였다."
+    "평소에도 그녀가 예쁘다 생각했지만, \n취기가 오른 그녀의 모습은 나를 더욱 설레게 하였다."
     
-    "KAIST 캠퍼스의 야경은 언제나 멋졌다. 우리는 걸으며 그 야경을 함께 감상했다."
+    "KAIST 캠퍼스의 야경은 언제나 멋졌다. \n우리는 걸으며 그 야경을 함께 감상했다."
 
     
 
@@ -480,11 +569,11 @@ label scene8:
 
     with dissolve
     
-    h "KAIST 캠퍼스 야경은 정말 멋있네요. 이런 곳에서 오나짱이랑 같이 있는 것은 정말 행운아에요."
+    h "KAIST 캠퍼스 야경은 정말 멋있네요. \n이런 곳에서 오나짱이랑 같이 있는 것은 정말 행운아에요."
     
     "그녀의 말에 고개를 끄덕이며, 나도 그런 생각이 들었다."
     
-    "그녀를 기숙사 앞까지 데려다주고 나서, 나는 히토미에게 작별 인사를 건넸다."
+    "그녀를 기숙사 앞까지 데려다주고 나서, \n 나는 히토미에게 작별 인사를 건넸다."
 
     p "히토미, 오늘은 이만 잘 가."
    
@@ -493,6 +582,10 @@ label scene8:
     "그녀는 기쁜 표정으로 나에게 인사하고 기숙사로 들어간다."
 
     "지금이 아니면 내 마음을 표현하기 쉽지 않을 것 같다는 생각이 든다."
+    
+    stop music
+
+    play music "waitforans.mp3"
 
     menu:
         
@@ -504,11 +597,13 @@ label scene8:
 
 
 label scene8_a:
-    show Hitomi m_10
+    stop music
+    show Hitomi m_08
     with dissolve
     h "그녀가 뒤돌아 본다."
 
     h "오나짱 왜 불렀어요? 할 말 있어요?"
+    play music "waitforans.mp3"
 
     menu:
             
@@ -527,16 +622,20 @@ label scene8_a:
 
 
 label scene8_a_1:
+    stop music
 
     h "오나짱 스윗하기까지해. 잘자고 내일 실습실에서 봐요."
     p "그녀와 작별 인사를 하고, 기숙사에 들어와서 피곤해 잠들었다."
     jump scene9
 
 label scene8_a_2:
+    stop music
     "내가 그렇게 말하자 히토미는 조금 놀라보였다."
-    show Hitomi m_11
+    show Hitomi m_05
     with dissolve
     h "오나짱, 그 말 진심이에요?"
+    
+    play music "waitforans.mp3"
 
     menu:    
         "그럼. 더 많이 알고 싶어요.":
@@ -546,11 +645,15 @@ label scene8_a_2:
             jump scene8_a_2_b       
     
 label scene8_a_2_a:
+    stop music
+    # play music "littletension.mp3"
     p "그럼. 더 많이 알고 가까워지고 싶어요."    
-    h "그런 오나짱도 꽤나 매력적이네요. 앞으로 재미있을 것 같아요. 잘자요, 오나짱."
+    h "그런 오나짱도 꽤나 매력적이네요. 앞으로 재미있을 것 같아요. \n잘자요, 오나짱."
     jump scene9
 
 label scene8_a_2_b:
+    stop music
+    play music "littletension.mp3"
     p "그냥 말장난이에요."    
     h "오나짱, 그런 장난 하지 마세요. 제 심장, 떨려요. 잘자요."    
     "히토미는 서둘러 기숙사로 돌아갔다. 오늘 하루를 생각하며, 나도 조금 더 깊은 생각에 잠겼다."
@@ -558,39 +661,61 @@ label scene8_a_2_b:
 
     
 label scene9:
+    hide Hitomi
+    stop music
+    play music "sojudump.mp3"
+    show Natori mtn_01 exp_03 with dissolve
     # 카이마루 
-    p "어제 너무 많이 마셨나?\n 속이 너무 안좋은 걸."    
-    p "해장이나 해야겠다"    
+    "어제 히토미랑 있는게 신나서 너무 많이 마셨나봐"
+    
+    "속이 너무 안 좋아."    
+    
+    "카이마루에 가서 해장이나 해야겠다"    
     scene bg_kaimaru
      
-    p  "리틀 하노이에서 쌀국수를 먹으려고 하는데,"
-    p "갑자기 익숙한 얼굴이 보였다."
+    "리틀 하노이에서 쌀국수를 먹으려고 하는데,"
+    
+    "익숙한 얼굴이 보였다."
+    hide Natori
 
     show Kaistian 
-    p "같은 분반의 카이스트 여학생 시연인 것 같았다."
-     
+    
+    "같은 분반의 카이스트 여학생 시연이다."
+
+    stop music
+    
+    play music "waitforans.mp3"
+
     menu:
+        
         "그녀를 어떻게 대할까?"
-        "시연아, 같이 밥 먹을래? 이런데서 뵈니 반갑네.":
+        
+        "여기에서 보니 반갑다.밥 같이 먹자.":
             jump scene9_1
-        "아니야, 아직 친하지 않은데 그냥 간다. 인사조차 부담스러울 것 같아.":
+        
+        "아직 친하지도 않은데 그냥 가자. 인사조차 부담스러울 것 같아.":
             jump scene10
 
     
     label scene9_1: 
+        stop music
         sy "음? 아, 너... [name]이지?"
+
+        sy "난 너보면 하고 싶은 말이 있었어."
         
-        sy "어제 네가 코딩하던 거, 나도 보고 있었어. 그냥 감탄하고 말았지."
+        sy "어제 네가 코딩하던 거, 나 사실 쭉 보고 있었어.\n 그냥 감탄하고 말았지."
+        
         sy "너의 집중력이나 코드를 다루는 능력, 그것들은 나와는 다른 레벨이야."
-        sy "그래서 솔직히, 너한테 그런 걸 인정해주는 게 좀 부끄럽지만, \n 어쨌든 인정해줘야 할 것 같아. 이해할 수 있겠지?"
+        
+        sy "부끄럽긴 하지만, \n 어쨌든 인정해줘야 할 것 같아. 이해할 수 있겠지?"
 
-        p "갑작스럽게 쏟아지는 그녀의 칭찬에, 약간 당황스러웠다."
-        p "그녀가 왜 부끄럽게 느껴지는지 잘 모르겠지만 \n 그녀의 칭찬에 어쩔 수 없이 미소를 짓고 말았다."
-        p "그녀의 칭찬이 나에게 주는 자부심을 부정할 수 없었다."
+        "갑작스럽게 쏟아지는 그녀의 칭찬에, 약간 당황스러웠다."
+        
+        "그녀가 왜 부끄럽게 느끼는지 잘 모르겠지만 \n 그녀의 칭찬에 어쩔 수 없이 미소를 짓고 말았다."
 
-
+        play music "waitforans.mp3"
         menu: 
-            "나도 시연을 칭찬해주었다.":
+            "나도 시연을 칭찬해주어야겠다.":
                 jump scene9_2
             "(쑥스러우니까 빨리 넘어가야겠다.) 그래. 고마워.":
                 jump scene10
@@ -598,22 +723,25 @@ label scene9:
         
         
 label scene9_2:
-    p "시연, 너도 코딩 잘하더라. 그런 도전적인 문제에 뛰어들어서 해결하는 모습, 정말 대단해."
+    stop music
+    p "시연, 너도 코딩 잘하더라. \n그런 도전적인 문제에 뛰어들어서 해결하는 모습, 정말 대단해."
 
     sy "정말 그렇게 생각해? 나도 그 문제를 해결하는 데 시간이 좀 걸렸지만,\n 그래도 나름대로 해결 방법을 찾아냈어."
-    sy "그래서 그런 칭찬을 듣게 되니, 조금은 기분이 좋네. 나도 좀 자랑스럽다고 할까? 내 능력을 인정해주니까 말이야."
+    sy "그래서 그런 칭찬을 듣게 되니, 조금은 기분이 좋네.\n 나도 좀 자랑스럽다고 할까? \n내 능력을 인정해주니까 말이야."
     sy "하지만, 그런 칭찬을 너에게서 들으니 좀 더 기분이 좋아."
     
-    sy "아마도 나도 너를 칭찬해주고 싶어서 그런 말을 한 것 같아. 이상하게 나도 너를 칭찬하고 싶어졌거든."
+    sy "아마도 나도 너를 칭찬해주고 싶어서 그런 말을 한 것 같아.\n이상하게 나도 너를 칭찬하고 싶어졌거든."
     sy "그런데 이런 말을 하니까 너무 쑥스러워. 그래도 감사해, [name]."
 
 label scene10:
+    stop music
     # 실습실로 걸어가는 길. 
     # 3, 4주차 팀메를 같이 하자고 제안한다. (happy ending, 3~4 주차 .)
     # 담타? 
 label scene11:
     # 나경에게 연락이 와서 저녁을 같이 먹기로 했다. 
     # 짝꿍인 지현이는 혼자 밥을 먹도록 냅둔다 vs 거절 한다. 
+    scene bg_113computer
     p "코딩을 열심히 하고 있는데, 카톡이 왔다."
     p "어제 술자리에서 만난 나경이었다."
 

@@ -2,23 +2,9 @@
 errors listed below, and try again.
 
 
-The label scene9_2 is defined twice, at File "game/script.rpy", line 600:
-label scene9_2:
-and File "game/script.rpy", line 660:
-label scene9_2:
-
-
-The label scene10 is defined twice, at File "game/script.rpy", line 610:
-label scene10:
-and File "game/script.rpy", line 670:
-label scene10:
-
-
-The label scene11 is defined twice, at File "game/script.rpy", line 614:
-label scene11:
-and File "game/script.rpy", line 674:
-label scene11:
-
+File "game/script.rpy", line 709: play requires a file
+    play music
+              ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Mon Jul 17 22:25:13 2023
+Tue Jul 18 14:44:57 2023
