@@ -1,13 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
+<<<<<<< HEAD
 While loading <renpy.display.im.Image object ('images/bg_kaimaru.jpg') at 0x104f9da30>:
   File "game/script.rpy", line 676, in script
     "리틀 하노이에서 쌀국수를 먹으려고 하는데,"
 OSError: Couldn't find file 'images/bg_kaimaru.jpg'.
+=======
+While running game code:
+  File "game/script.rpy", line 501, in script
+    show Hitomi m_10
+Exception: When showing Hitomi, m_10 is not a known attribute.
+>>>>>>> jh
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/script.rpy", line 676, in script
     "리틀 하노이에서 쌀국수를 먹으려고 하는데,"
   File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 930, in execute
@@ -69,8 +77,27 @@ Full traceback:
   File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/loader.py", line 833, in load
     raise IOError("Couldn't find file '%s'." % name)
 OSError: Couldn't find file 'images/bg_kaimaru.jpg'.
+=======
+  File "game/script.rpy", line 501, in script
+    show Hitomi m_10
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\gl2\live2d.py", line 627, in _duplicate
+    raise Exception("When showing {}, {} is not a known attribute.".format(" ".join(args.name), i))
+Exception: When showing Hitomi, m_10 is not a known attribute.
+>>>>>>> jh
 
 macOS-13.2.1-arm64-arm-64bit arm64
 Ren'Py 8.1.1.23060707
 kaistmossolescape 1.0
+<<<<<<< HEAD
 Tue Jul 18 15:25:49 2023
+=======
+Tue Jul 18 15:20:20 2023
+>>>>>>> jh
