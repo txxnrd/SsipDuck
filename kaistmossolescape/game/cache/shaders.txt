@@ -1,20 +1,20 @@
+renpy.dissolve renpy.geometry
+=======
+<<<<<<< HEAD
+>>>>>>> jh
+renpy.alpha renpy.geometry renpy.texture
+renpy.texture
+renpy.ftl
 renpy.dissolve renpy.dissolve
+renpy.texture live2d.flip_texture live2d.colors renpy.alpha live2d.mask renpy.texture live2d.flip_texture live2d.colors renpy.alpha live2d.mask
+live2d.colors live2d.flip_texture renpy.alpha renpy.geometry renpy.texture
+live2d.colors live2d.flip_texture live2d.mask renpy.geometry renpy.texture
+renpy.geometry renpy.texture
+renpy.alpha renpy.texture
+renpy.texture live2d.flip_texture live2d.colors renpy.alpha renpy.texture live2d.flip_texture live2d.colors renpy.alpha
+renpy.solid
 live2d.colors live2d.flip_texture live2d.mask renpy.alpha renpy.geometry renpy.texture
 renpy.texture live2d.flip_texture live2d.colors renpy.texture live2d.flip_texture live2d.colors
-live2d.colors live2d.flip_texture renpy.geometry renpy.texture
-renpy.geometry renpy.texture
-=======
-renpy.texture live2d.flip_texture live2d.colors renpy.alpha live2d.mask renpy.texture live2d.flip_texture live2d.colors renpy.alpha live2d.mask
-<<<<<<< HEAD
 renpy.geometry renpy.solid
-live2d.colors live2d.flip_texture live2d.mask renpy.geometry renpy.texture
-renpy.alpha renpy.geometry renpy.texture
-renpy.texture live2d.flip_texture live2d.colors renpy.alpha renpy.texture live2d.flip_texture live2d.colors renpy.alpha
->>>>>>> jh
-live2d.colors live2d.flip_texture renpy.alpha renpy.geometry renpy.texture
-renpy.texture
-renpy.dissolve renpy.geometry
-renpy.alpha renpy.texture
-renpy.ftl
-renpy.solid
 renpy.texture live2d.flip_texture live2d.colors live2d.mask renpy.texture live2d.flip_texture live2d.colors live2d.mask
+live2d.colors live2d.flip_texture renpy.geometry renpy.texture
