@@ -48,8 +48,6 @@ image gpt:
     "images/gpt_chat.png"
 image blog:
     "images/howtotalktowoman.png"
-image kaist_nightwalk:
-    "images/bg_nightwalk.jpg"
 image bg_dorm:
     "images/bg_dorm.jpg"
     zoom 1.4
@@ -67,9 +65,10 @@ image bg_kaimaru:
     zoom 1.5
 image bg_taepungso:
     "images/bg_taepungso.jpg"
-    zoom 1.3
+    zoom 1.4
 image bg_117:
     "images/bg_117.jpg"
+    zoom 1.4
 
 image bg_zakyo:
     "images/bg_zakyo.jpg"
@@ -83,6 +82,12 @@ image bg_china_in:
     "images/china_in.jpeg"
     zoom 0.92
 
+image bg_kaistnight:
+    "images/bg_kaistnight.jpg"
+    zoom 1.4
+image bg_dorm2:
+    "images/bg_arum.jpg"
+    zoom 1.6
 image soju:
     "soju-straight.png"
     0.5 #this part defines how long to wait before next frame
@@ -92,6 +97,24 @@ image soju:
 
 image gpt_siyeon:
     "images/bg_siyeon_gpt.jpg"
+
+image mo:
+    "images/모.png"
+    0.7
+image ssol:
+    "images/쏠.png"
+    0.7
+image tal:
+    "images/탈.png"
+image chul:
+    "images/출.png"
+image sil:
+    "images/실.png"
+image pae:
+    "images/패.png"
+image mstc_fail:
+    "images/fail_to_mstc.jpg"
+    zoom 1.5
     
 
 image gptvideo =Movie(play="images/gptvideo.webm",size=(1120,620),loop=False,xalign=0.5,yalign=0.1)
@@ -567,12 +590,10 @@ label scene7_b:
 label scene8:
     stop music
     play music "happiest_ever.mp3"
+    scene bg_kaistnight
 
-    show Hitomi m_04
+    show Hitomi m_02
     with dissolve
-
-    scene kaist_nightwalk
-
     "국밥을 먹은 후 우리는 함께 기숙사로 향했다."
     
     h "오늘 정말 즐거웠어요. 오나짱과 함께 하니까 뭔가 더 신나요."
@@ -585,14 +606,15 @@ label scene8:
 
     
 
-    show Hitomi m_07
-    
-
-    with dissolve
     
     h "KAIST 캠퍼스 야경은 정말 멋있네요. \n이런 곳에서 오나짱이랑 같이 있는 것은 정말 행운아에요."
     
     "그녀의 말에 고개를 끄덕이며, 나도 그런 생각이 들었다."
+
+    scene bg_dorm2
+
+    show Hitomi m_05
+    with dissolve
     
     "그녀를 기숙사 앞까지 데려다주고 나서, \n 나는 히토미에게 작별 인사를 건넸다."
 
@@ -616,7 +638,6 @@ label scene8:
         "뒤돌아 갈 길을 간다.":
             jump scene9
 
-
 label scene8_a:
     stop music
     show Hitomi m_08
@@ -629,15 +650,12 @@ label scene8_a:
     menu:
             
             "잘 가라고 말 하고 싶었어요.":
-               
                 jump scene8_a_1
             
-            "앞에 차와요.":
-                
+            "앞에 차와요.":                
                 jump scene8_a_1
 
             "히토미. 당신을 더 알아가고 싶어요.":
-
                 jump scene8_a_2
 
 
@@ -932,6 +950,7 @@ label scene13_b:
     "나경이의 제안을 거절하고 어색한 상태로 실습실에 도착했다."
     
     "실습실에 도착하니 팀메이트인 지현이 혼자 코딩을 하고 있었다."
+    show Jihyeon m03 m04
     
     p "지현아, 잘하고 있었어?"
 
@@ -941,7 +960,7 @@ label scene13_b:
     
     "나는 지현을 좋아하고 있었다는 것..."
 
-    show Jihyeon m03 m04
+
     j "오빠 오늘은 빨리하고 술 먹는 거 어때?"
 
     p "엉 너무 좋지."
@@ -1003,7 +1022,10 @@ label scene15_b:
 
 label scene16:
     # 117호 
-    scene bg_117    
+    scene bg_117  
+
+    show Kaistian
+
     "그 주, 시연이가 금주의 픽으로 선정되었다."
     "그녀는 강단에서 자신감 넘치게 발표를 하고 있었다."
     "나는 그녀가 표현하는 강한 열정에 감탄하며 그녀를 보았다."
@@ -1084,17 +1106,17 @@ label scene18_2:
     jump happyEnding_Siyoen
 label end1:
     "그렇게 나는 일주일간 그녀와 아무 말도 할 수 없었고, \n 몰입캠프 전체에  인신공격남으로 소문나게 되어 \n 괴로운 한달을 보내야 했다…"
-    jump end
+    jump sad_end
 label end2:
     "그렇게 나는 일주일간 그녀와 아무 말도 할 수 없었고, \n 몰입캠프 전체에  급발진남으로 소문나게 되어 \n 괴로운 한달을 보내야 했다…"
-    jump end
+    jump sad_end
 label end3:
     "그렇게 나는 굴러들어온 지현이를 걷어찼다. "
-    jump end
+    jump sad_end
 
 label end4:
     "샤오차이나의 벽은 굉장히 약했다. \n 부상을 입은 지현이와 나는 서둘러 응급실에 실려간다.."
-    jump end
+    jump sad_end
 
 label end5:
     "Happy Ending!!"
@@ -1103,13 +1125,29 @@ label end5:
 label end7: 
     "다른 남자와 잘되어가는 시연의 모습을 지켜보는 것은 \n 마음이 너무 안좋았지만, 내가 할 수 있는 것은 없었다. "
     "그렇게, 나는 모쏠 탈출을 하지 못한 채 게임이 끝났다."
-    jump end
+    jump sad_end
 label end8: 
     "모쏠탈출은 비록 실패했지만, 여러 프로젝트를 하며 코딩실력은 한층 성장한 것 같다. "
-    jump end
+    jump sad_end
 
 label happyEnding_Siyoen:
     " 나와 시연은 서로의 지적인 욕구를 충족시켜주며, 몰입캠프 3분반 1호 커플로 소문나게 되었다. "
     jump end
 
 label end:
+    "the end"
+
+label sad_end:
+    show mo with dissolve:
+        linear 1.0 xpos 200 ypos 500
+    show ssol with dissolve:
+        linear 1.0 xpos 400 ypos 500
+    show tal with dissolve:
+        linear 1.0  xpos 600 ypos 500
+    show chul with dissolve:
+        linear 1.0 xpos 800 ypos 500
+    show sil with dissolve:
+        linear 1.0 xpos 1000 ypos 500
+    show pae with dissolve:
+        linear 1.0 xpos 1200 ypos 500
+    $ renpy.pause(15, hard=False)

@@ -1,56 +1,9 @@
-Wed Jul 19 13:34:54 2023
+Wed Jul 19 15:35:32 2023
 Windows-10-10.0.22621
 Ren'Py 8.1.1.23060707
  
 
-Bootstrap to the start of init.init. took 0.06s
+Bootstrap to the start of init.init. took 0.10s
 Early init. took 0.01s
-Loader init. took 0.58s
-Loading error handling. took 0.12s
-Loading script. took 2.24s
-Loading save slot metadata. took 0.16s
-Loading persistent. took 0.00s
-Running init code. took 0.72s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.12s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\uSER\\AppData\\Roaming/RenPy/backups\\kaistmossolescape':
-Dump and make backups. took 0.10s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.02s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.03s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.05s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.40s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Intel'"
-Renderer: b'Intel(R) Iris(R) Plus Graphics'
-Version: b'4.6.0 - Build 27.20.100.8853'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1009) drawable=(1920, 1009)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.05s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+Loader init. took 0.61s
+Loading error handling. took 0.08s
