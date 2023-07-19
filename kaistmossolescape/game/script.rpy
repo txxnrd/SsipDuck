@@ -1022,7 +1022,7 @@ label scene13:
     # 실습실
     scene bg_room113_whole
     "나경이의 고백을 거절하고 어색한 상태로 실습실에 도착했다."
-    "나는 그녀를 거절한 행동에 대해 미안함을 느꼈다. 그녀는 나에게 감정을 표현했지만, 나는 그것을 받아들이지 못했다."
+    "나는 그녀를 거절한 행동에 대해 미안함을 느꼈다. \n 그녀는 나에게 감정을 표현했지만, \n 나는 그것을 받아들이지 못했다."
     "실습실에 도착하니 팀메이트인 지현이 혼자 코딩을 하고 있었다."
     
     p "지현아, 저녁 혼자 먹게 해서 정말 미안하다."
@@ -1052,8 +1052,9 @@ label scene13:
             "좋아. 하던거만 하고 가자":
                 jump scene14
             "너 놀려고 몰입캠프 왔어?":
+                "치이.. 오빠 정말 재미없는 사람이네.. "
+                "지현이는 기분이 상했는지 아무 말도 하지 않았다. "
                 jump scene16
-
     label scene13_1_b:
         p "응, 작교 다녀왔는데 맛있더라."
         
@@ -1192,8 +1193,10 @@ label scene16_1_b:
 
 label scene17:
     # 스터디룸에서 코딩 중
-    p "시연이와 나는 열심히 프로젝트를 진행하고 있었다."
-    p "시연이는 프론트엔드를 맡아 플러터로 작업하고 있었고, 나는 백엔드를 맡아 Node.js로 작업하고 있었다."
+    scene bg_room113_whole
+    show Kaistian
+    p "시연이와 나는 같이  프로젝트를 진행하게 되었다."
+    p "시연이는 프론트엔드를 맡아 플러터로 작업하고 있었고, \n 나는 백엔드를 맡아 Node.js로 작업하고 있었다."
     p "그런데 어느 순간, 시연이는 이유를 모르는 에러에 직면해 고민에 빠져있었다."
 
     sy "'으아, 너무 어렵다... 공식 문서를 뒤져봐도 도대체 무슨 문제인지 모르겠어.'"
@@ -1282,12 +1285,10 @@ label happyEnding_Hitomi:
     jump end_success
 
 
-label happyEnding_Siyoen:
-    " 나와 시연은 서로의 지적인 욕구를 충족시켜주며, 몰입캠프 3분반 1호 커플로 소문나게 되었다. "
-    jump end
 
 
 label end_fail:
+    scene mstc_fail
     show mo with dissolve:
         linear 1.0 xpos 200 ypos 500
     show ssol with dissolve:
@@ -1313,7 +1314,7 @@ label end_success:
     show jang with dissolve:
         linear 1.0  xpos 800 ypos 500
     show che with dissolve:
-        linear 1.0 xpos 1100 ypos 
+        linear 1.0 xpos 1100 ypos 500
     show heart with dissolve:
         linear 1.0 xpos 1100 ypos 500
     $ renpy.pause(15, hard=False)

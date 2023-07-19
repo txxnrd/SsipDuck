@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1316: expected 'simple_expression' not found.
-    linear 1.0 xpos 1100 ypos 
-                              ^
+The label happyEnding_Siyoen is defined twice, at File "game/script.rpy", line 1276:
+label happyEnding_Siyoen:
+and File "game/script.rpy", line 1285:
+label happyEnding_Siyoen:
+
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Wed Jul 19 15:49:50 2023
+Wed Jul 19 15:54:13 2023
