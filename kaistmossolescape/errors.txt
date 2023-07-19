@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 954: expected menuitem
-    hide soju
-    ^
+File "game/script.rpy", line 1316: expected 'simple_expression' not found.
+    linear 1.0 xpos 1100 ypos 
+                              ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Tue Jul 18 19:06:03 2023
+Wed Jul 19 15:49:50 2023

@@ -81,6 +81,9 @@ image bg_china_out:
 image bg_china_in:
     "images/china_in.jpeg"
     zoom 0.92
+image bg_smokearea:
+    "images/smokearea.jpeg"
+    zoom 0.76
 
 image bg_kaistnight:
     "images/bg_kaistnight.jpg"
@@ -112,9 +115,24 @@ image sil:
     "images/실.png"
 image pae:
     "images/패.png"
+image sa:
+    "images/사.png"
+image rang:
+    "images/랑.png"
+image jang:
+    "images/쟁.png"
+image che:
+    "images/취.png"
+image heart:
+    "images/heart.png"
 image mstc_fail:
     "images/fail_to_mstc.jpg"
     zoom 1.5
+image ciga:
+    "images/ciga.png"
+    zoom 0.3
+
+
     
 
 image gptvideo =Movie(play="images/gptvideo.webm",size=(1120,620),loop=False,xalign=0.5,yalign=0.1)
@@ -420,7 +438,7 @@ label scene6:
 
 
 
-    stop music
+    
 
 
     show Nakyeong at top
@@ -430,6 +448,8 @@ label scene6:
     n " 여기는 몇반이야? 3반? 나는 2반 나경이야!"
     
     n "이 귀요미는 이름이 뭐야?"
+    
+    stop music
 
     play music "waitforans.mp3"
     menu:
@@ -687,7 +707,19 @@ label scene8_a_2_a:
     stop music
     # play music "littletension.mp3"
     p "그럼. 더 많이 알고 가까워지고 싶어요."    
-    h "그런 오나짱도 꽤나 매력적이네요. 앞으로 재미있을 것 같아요. \n잘자요, 오나짱."
+
+    h "오나짱. 우리는 구크적도 다르고 \n 현실적인 제약이 너무 많아요."
+    
+    h "이런 나라도 사랑해 줄 수 있어요?"
+
+    stop music
+
+    menu:
+        "험난한 앞길이 우리를 막더라도 나는 너를 사랑할게.":
+            jump happyEnding_Hitomi
+        "그 정도 확신은 없는 것 같아. 미안해.":
+            jump scene9
+
     jump scene9
 
 label scene8_a_2_b:
@@ -705,12 +737,14 @@ label scene9:
     play music "sojudump.mp3"
     show Natori mtn_01 exp_03 with dissolve
     # 카이마루 
+       
+    scene bg_kaimaru
+
     "어제 히토미랑 있는게 신나서 너무 많이 마셨나봐"
     
     "속이 너무 안 좋아."    
     
-    "카이마루에 가서 해장이나 해야겠다"    
-    scene bg_kaimaru
+    "카이마루에 해장하러 오길 잘했어." 
      
     "리틀 하노이에서 쌀국수를 먹으려고 하는데,"
     
@@ -757,30 +791,108 @@ label scene9:
             "나도 시연을 칭찬해주어야겠다.":
                 jump scene9_2
             "(쑥스러우니까 빨리 넘어가야겠다.) 그래. 고마워.":
-                jump scene10
+                jump scene11
         
         
         
 label scene9_2:
     stop music
-    p "시연, 너도 코딩 잘하더라. \n그런 도전적인 문제에 뛰어들어서 해결하는 모습, 정말 대단해."
-
-    sy "정말 그렇게 생각해? 나도 그 문제를 해결하는 데 시간이 좀 걸렸지만,\n 그래도 나름대로 해결 방법을 찾아냈어."
-    sy "그래서 그런 칭찬을 듣게 되니, 조금은 기분이 좋네.\n 나도 좀 자랑스럽다고 할까? \n내 능력을 인정해주니까 말이야."
-    sy "하지만, 그런 칭찬을 너에게서 들으니 좀 더 기분이 좋아."
     
-    sy "아마도 나도 너를 칭찬해주고 싶어서 그런 말을 한 것 같아.\n이상하게 나도 너를 칭찬하고 싶어졌거든."
-    sy "그런데 이런 말을 하니까 너무 쑥스러워. 그래도 감사해, [name]."
+    play music "withsiyeon.mp3"
+
+    p "시연아, 너도 코딩 잘하더라. \n 도전적인 문제에 자신 있게 뛰어들어서 해결하는 모습,\n 정말 대단해."
+
+    sy "정말 그렇게 생각해? 짜식, [name], 너 칭찬 할 줄도 알고 멋있어.\n"
+    
+    sy "그런 칭찬을 너한테 들으니 기분이 좋다."
+    
+    sy "난 할 거 있어서 먼저 간다.수고해라."
+
+    "자기 할 말을 내뱉고 갑자기 혼자 가는 그녀."
+
+    "엉뚱한 그녀가 더욱 매력적으로 느껴진다..."
+
+    stop music
+
+    play music "waitforans.mp3"
+    menu:
+        "서둘러 그녀에게 뛰어가 같이 가자고 한다.":
+            jump scene10
+
+        "지현이가 기다리고 있는 실습실로 빠르게 혼자 간다.":
+            jump scene11
 
 label scene10:
     stop music
-    # 실습실로 걸어가는 길. 
-    # 3, 4주차 팀메를 같이 하자고 제안한다. (happy ending, 3~4 주차 .)
-    # 담타? 
+    
+    
+
+    sy "나 담배 피러 가는데 너 왜 따라오냐"
+    
+    "담배를 한 번도 펴본 적 없는 [name]. 괜히 그녀와 함께 있고 싶다."
+
+
+    play music "waitforans.mp3"
+    menu:
+        "괜히 같이 피고 싶어...":
+            jump scene10_a
+
+        "비흡연자라 담배는 좀 그래.":
+            jump scene10_b
+
+label scene10_a:
+    stop music
+    scene bg_smokearea
+
+    
+
+    play music "smoke.mp3"
+    show Kaistian
+    show ciga at top 
+    
+    p "나도 담배 필래. 한 대 줘봐"
+
+    sy "내가 너 담배 처음 물리는거냐."
+
+    p "뭐래ㅋㅋ 나 원래 펴."
+
+    p "불이나 좀 붙여줄래?"
+
+    sy "아니 입에 대야 붙여주지"
+
+    p "아 그래?ㅋㅋ 몰랐네"
+
+    "처음 담배를 펴 본 [name],한 모금의 담배 연기를 크게 삼킨다."
+    
+    play music "Dangerous.mp3"
+
+    p "켁..켁..나 너무 힘들어.."
+
+    p "몸이 진짜 왜 이러지..."
+
+    "갑자기 발작을 일으키고"
+
+    "니코틴에 약한 [name]은 병원에 실려가고,\n 몰입캠프에 더 이상 참여하지 못한다."
+
+    jump end
+
+
+label scene10_b:
+    stop music
+    p "아 담배 피는지는 몰랐네..먼저 갈게"
+
+    jump scene11
+
+    
 label scene11:
-    # 나경에게 연락이 와서 저녁을 같이 먹기로 했다. 
-    # 짝꿍인 지현이는 혼자 밥을 먹도록 냅둔다 vs 거절 한다. 
+    stop music
     scene bg_113computer
+    play music "summer-walk.mp3"
+
+    "시연이와 대화를 나누고 실습실에 돌아왔다."
+
+    "옆에서 짝꿍 지현이는 열심히 코딩을 하고 있다."
+    
     p "코딩을 열심히 하고 있는데, 카톡이 왔다."
     p "어제 술자리에서 만난 나경이었다."
 
@@ -788,8 +900,11 @@ label scene11:
     n "안녕, [name]아. 저녁에 시간 있어?"
     n "밥 같이 먹자고 연락했어!"
 
-    p "갑자기 지현이가 걱정이 되었다."
-    p "내가 오늘 나경이랑 저녁을 먹으면, 지현은 혼자 밥을 먹어야 할 텐데..."
+    "인상이 좋았던 나경이와 저녁이 먹고 싶었다."
+    "허나 지현이가 걱정이 되어 신경이 쓰였다."
+    "내가 오늘 나경이랑 저녁을 먹으면, 지현은 혼자 밥을 먹어야 할 텐데..."
+
+    stop music
     play music "waitforans.mp3"
 
     menu:
@@ -808,10 +923,11 @@ label scene11:
         "이렇게 답하니 나경이로부터  1시간  이후 답변이 왔다."
         n "아니, 나는 빠질게."
         "당황한 나는 다시 카톡을 보내보았지만,  \n 답은 오지 않았다."
-        jump scene14
+        jump scene13_b
+    
     label scene11_2:
         stop music
-        p "나는 조금 죄책감이 들었다."
+        p "나는 조금 미안함이 들었다."
         
         p "미안, 나경아. 약속이 있어서 안될 것 같아. 다음에 보자."
         
@@ -931,7 +1047,12 @@ label scene13:
         "나의 대답에 지현이는 놀라 보였다."
         j "그래서 그렇게 빨리 돌아온 거였구나."
         j "나랑은 술 먹으러 가자"
-        jump scene14
+        play music "waitforans.mp3"
+        menu:
+            "좋아. 하던거만 하고 가자":
+                jump scene14
+            "너 놀려고 몰입캠프 왔어?":
+                jump scene16
 
     label scene13_1_b:
         p "응, 작교 다녀왔는데 맛있더라."
@@ -941,7 +1062,7 @@ label scene13:
         "나의 대답에 지현이는 아무 대답 없이 코딩에 집중하였다."
         
         "그 이후로 나는 지현이의 집중하는 뒷모습 만을 보았다."
-        
+             
         jump end3
 
 label scene13_b:
@@ -963,13 +1084,26 @@ label scene13_b:
 
     j "오빠 오늘은 빨리하고 술 먹는 거 어때?"
 
-    p "엉 너무 좋지."
+    play music "waitforans.mp3"
+    menu:
+        "좋아. 하던거만 하고 가자":
+            jump scene14
+        "너 놀려고 몰입캠프 왔어?":
+            jump scene16
+
 
 label scene14:
+    stop music
+    play music "lighthappy.mp3"
     scene bg_china_out
     show Jihyeon m03 m04
+    "그렇게 우리는 샤오 차이나에 왔다."
 
-    j "오빠 오늘 술 많이 마실꺼야?"
+    "그녀와 함께라면 어떤 일이든 일어날 수 있을 것 같다."
+
+    "심장이 요동친다."
+
+    j "오빠 오늘 술 많이 마실까아?"
 
     p "오늘은 적당히 마시자."
 
@@ -999,6 +1133,8 @@ label scene14:
 
     "그녀에게 행동을 취한다."
 
+    stop music
+
     
 
     play music "waitforans.mp3"
@@ -1019,17 +1155,19 @@ label scene15_b:
 
     j "우리 이렇게 평생 함께하자."
 
+    jump end5
 
 label scene16:
+    stop music
+    "어김없이 한 주가 지나고 발표날인 목요일이 왔다."
     # 117호 
-    scene bg_117  
-
+    scene bg_117    
     show Kaistian
-
     "그 주, 시연이가 금주의 픽으로 선정되었다."
     "그녀는 강단에서 자신감 넘치게 발표를 하고 있었다."
-    "나는 그녀가 표현하는 강한 열정에 감탄하며 그녀를 보았다."
+    "나는 그의 강한 열정에 감탄하며 그녀를 뚫어져라 보았다."
     "그 순간, 내 마음은 그녀에게로 이끌렸다."
+    "발표를 마친 그녀가 내 앞자리에 앉는다."
 menu:
     "시연에게 말을 건네고, 그녀와 이야기하며 공통 관심사를 찾아보자.":
         jump scene16_1_a
@@ -1104,40 +1242,52 @@ label scene18_2:
     p " 그래서 그냥 잠을 못 이루던 밤, 카톡을 보내기로 결심했다."
     p "그래서 우리 둘은 3분반 1호 커플로 불리게 되었다. 몰입캠프 전체에게 똑똑하고 열정 넘치는 커플로 소문이 나, 그런 주목받는 내내 시연이와 함께하는 시간이 즐거웠다." 
     jump happyEnding_Siyoen
+
+label end:
+    "그렇게 미연시는 막을 내린다.."
+    jump end_fail
 label end1:
     "그렇게 나는 일주일간 그녀와 아무 말도 할 수 없었고, \n 몰입캠프 전체에  인신공격남으로 소문나게 되어 \n 괴로운 한달을 보내야 했다…"
-    jump sad_end
+    jump end_fail
 label end2:
     "그렇게 나는 일주일간 그녀와 아무 말도 할 수 없었고, \n 몰입캠프 전체에  급발진남으로 소문나게 되어 \n 괴로운 한달을 보내야 했다…"
-    jump sad_end
+    jump end_fail
 label end3:
     "그렇게 나는 굴러들어온 지현이를 걷어찼다. "
-    jump sad_end
+    jump end_fail
 
 label end4:
     "샤오차이나의 벽은 굉장히 약했다. \n 부상을 입은 지현이와 나는 서둘러 응급실에 실려간다.."
-    jump sad_end
+    jump end_fail
 
 label end5:
     "Happy Ending!!"
-    jump end
+    jump end_success
 
 label end7: 
     "다른 남자와 잘되어가는 시연의 모습을 지켜보는 것은 \n 마음이 너무 안좋았지만, 내가 할 수 있는 것은 없었다. "
     "그렇게, 나는 모쏠 탈출을 하지 못한 채 게임이 끝났다."
-    jump sad_end
+    jump end_fail
+
 label end8: 
-    "모쏠탈출은 비록 실패했지만, 여러 프로젝트를 하며 코딩실력은 한층 성장한 것 같다. "
-    jump sad_end
+    "모쏠탈출은 비록 실패했지만, \n여러 프로젝트를 하며 코딩실력은 한층 성장한 것 같다. "
+    jump end_fail
+
+label happyEnding_Siyoen:
+    " 나와 시연은 서로의 지적인 욕구를 충족시켜주며, \n몰입캠프 3분반 1호 커플로 소문나게 되었다. "
+    jump end_success
+
+label happyEnding_Hitomi:
+    " 나와 히토미는 서로의 사랑을 확인하며, \n 몰입캠프 3분반 1호 커플로 소문나게 되었다. "
+    jump end_success
+
 
 label happyEnding_Siyoen:
     " 나와 시연은 서로의 지적인 욕구를 충족시켜주며, 몰입캠프 3분반 1호 커플로 소문나게 되었다. "
     jump end
 
-label end:
-    "the end"
 
-label sad_end:
+label end_fail:
     show mo with dissolve:
         linear 1.0 xpos 200 ypos 500
     show ssol with dissolve:
@@ -1151,3 +1301,27 @@ label sad_end:
     show pae with dissolve:
         linear 1.0 xpos 1200 ypos 500
     $ renpy.pause(15, hard=False)
+    jump the_end
+
+
+
+label end_success:
+    show sa with dissolve:
+        linear 1.0 xpos 200 ypos 500
+    show rang with dissolve:
+        linear 1.0 xpos 500 ypos 500
+    show jang with dissolve:
+        linear 1.0  xpos 800 ypos 500
+    show che with dissolve:
+        linear 1.0 xpos 1100 ypos 
+    show heart with dissolve:
+        linear 1.0 xpos 1100 ypos 500
+    $ renpy.pause(15, hard=False)
+    jump the_end
+
+
+label the_end:
+    "The end"
+
+
+
