@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 251, in script
-    d " 죄송합니다…제가 무례했네여"
-Exception: Sayer 'd' is not defined.
+  File "game/script.rpy", line 798, in script
+    jump scene14_b
+ScriptError: could not find label 'scene14_b'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 251, in script
-    d " 죄송합니다…제가 무례했네여"
-  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ast.py", line 890, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ast.py", line 783, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'd' is not defined.
+  File "game/script.rpy", line 798, in script
+    jump scene14_b
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 1992, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/script.py", line 1013, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'scene14_b'.
 
-Windows-10-10.0.22621 AMD64
+macOS-13.2.1-arm64-arm-64bit arm64
 Ren'Py 8.1.1.23060707
 kaistmossolescape 1.0
-Mon Jul 17 13:46:34 2023
+Tue Jul 18 19:26:16 2023

@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 254: menu statement expects a non-empty block.
-    menu:
-        ^
-
-File "game/script.rpy", line 256: expected statement.
-    "나서서 술을 대신 마신다.":
-                    ^
-
-File "game/script.rpy", line 259: expected statement.
-    "자기 문제는 자기가 알아서 해야지. 그냥 넘긴다.":
-                                 ^
+File "game/script.rpy", line 954: expected menuitem
+    hide soju
+    ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Mon Jul 17 13:32:46 2023
+Tue Jul 18 19:06:03 2023
