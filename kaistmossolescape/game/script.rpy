@@ -711,12 +711,14 @@ label scene9:
     play music "sojudump.mp3"
     show Natori mtn_01 exp_03 with dissolve
     # 카이마루 
+       
+    scene bg_kaimaru
+
     "어제 히토미랑 있는게 신나서 너무 많이 마셨나봐"
     
     "속이 너무 안 좋아."    
     
-    "카이마루에 가서 해장이나 해야겠다"    
-    scene bg_kaimaru
+    "카이마루에 해장하러 오길 잘했어." 
      
     "리틀 하노이에서 쌀국수를 먹으려고 하는데,"
     
