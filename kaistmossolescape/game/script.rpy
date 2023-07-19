@@ -100,7 +100,7 @@ image soju:
 
 image gpt_siyeon:
     "images/bg_siyeon_gpt.jpg"
-
+    zoom 1.3    
 image mo:
     "images/모.png"
     0.7
@@ -1095,7 +1095,7 @@ label scene13_b:
 
 label scene14:
     stop music
-    play music "lighthappy.mp3"
+    play music "light_happy.mp3"
     scene bg_china_out
     show Jihyeon m03 m04
     "그렇게 우리는 샤오 차이나에 왔다."
@@ -1219,7 +1219,7 @@ label scene17:
         sy "그렇게 쉬우면 니가 해봐. \n 백엔드는 얼마나 잘짜는지 보자. "
         jump end
     label scene17_c:
-        sy "어머, 진짜? 너 챗지피티 프로 유저였어? 그럼 너랑 같이 프로젝트하는 건 정말 행운이겠다."
+        sy "어머, 진짜? 너 챗지피티 프로 유저였어?\n 그럼 너랑 같이 프로젝트하는 건 정말 행운이겠다."
         sy "나랑 챗지피티 같이 쓰자. "
         jump scene18_2
 
@@ -1232,18 +1232,17 @@ label scene18_1:
 label scene18_2:
     "챗지피티를 나눠 쓰게 된 이후로, 시연이와 나는 점점 자주 연락하게 되었다."
     "우리 둘 다 열심히 했고, 결국 금주의 픽에 선정되었다." 
-    "3주차에 금주의 픽에 선정되어 기뻤지만, 4주차에는 시연이와 함께 팀을 할 수 없어 아쉬웠다. "
+    "3주차에 금주의 픽에 선정되어 기뻤지만,\n 4주차에는 시연이와 함께 팀을 할 수 없어 아쉬웠다. "
     "교실에서 그녀를 마주칠 때마다 심장은 미친 듯이 뛰었다. \n 그런데도 외면하려고 애쓰며, 그저 코딩에만 몰두했다."
 
     "하지만 챗 지피티를 이용하려고 들어갔을 때, 내 심장은 멎을 듯이 뛰었다. "
-    show gpt_siyeon
+    show gpt_siyeon at top
     "그곳에는 '남자에게 고백하는 법', 'intp 이상형' 등의 검색 내역이 남아 있었다. "
-    "나와 함께 챗지피티를 쓰는 사람은 시연이밖에 없었다. \n 과연 이게 그녀가 물어본 건지, 그런 생각에 밤새 잠을 이루지 못했다."
-
+    "나와 함께 챗지피티를 쓰는 사람은 시연이밖에 없었다. \n 과연 이게 그녀가 물어본 건지, 그런 생각에 밤새 잠을 이루지 못했다." 
     
     p "몰입캠프가 끝나기 전에 꼭 그녀에게 고백을 해야겠다는 생각을 했다."
     p " 그래서 그냥 잠을 못 이루던 밤, 카톡을 보내기로 결심했다."
-    p "그래서 우리 둘은 3분반 1호 커플로 불리게 되었다. 몰입캠프 전체에게 똑똑하고 열정 넘치는 커플로 소문이 나, 그런 주목받는 내내 시연이와 함께하는 시간이 즐거웠다." 
+    p "그래서 우리 둘은 3분반 1호 커플로 불리게 되었다. \n 몰입캠프 전체에게 똑똑하고 열정 넘치는 커플로 소문이 나, \n 그런 주목받는 내내 시연이와 함께하는 시간이 즐거웠다." 
     jump happyEnding_Siyoen
 
 label end:
@@ -1316,7 +1315,7 @@ label end_success:
     show che with dissolve:
         linear 1.0 xpos 1100 ypos 500
     show heart with dissolve:
-        linear 1.0 xpos 1100 ypos 500
+        linear 1.0 xpos 1400 ypos 500
     $ renpy.pause(15, hard=False)
     jump the_end
 

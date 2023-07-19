@@ -1,76 +1,49 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/ciga2.png') at 0x1054d5340>:
-  File "game/script.rpy", line 813, in script
-    p "나도 담배 필래. 한 대 줘봐"
-Exception: Could not load image 'images/ciga2.png': error('Unsupported image format')
+While running game code:
+  File "game/script.rpy", line 925, in script
+    "당황한 나는 다시 카톡을 보내보았지만,  \n 답은 오지 않았다."
+OSError: Couldn't find file 'lighthappy.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 813, in script
-    p "나도 담배 필래. 한 대 줘봐"
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ast.py", line 930, in execute
+  File "game/script.rpy", line 925, in script
+    "당황한 나는 다시 카톡을 보내보았지만,  \n 답은 오지 않았다."
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ast.py", line 930, in execute
     renpy.exports.say(who, what, *args, **kwargs)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/exports.py", line 1473, in say
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\exports.py", line 1473, in say
     who(what, *args, **kwargs)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/character.py", line 1352, in __call__
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\character.py", line 1352, in __call__
     self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/character.py", line 1003, in do_display
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\character.py", line 1003, in do_display
     display_say(who,
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/character.py", line 693, in display_say
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\character.py", line 693, in display_say
     rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/ui.py", line 299, in interact
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/core.py", line 3579, in interact
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/core.py", line 4172, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/core.py", line 2779, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/im.py", line 330, in get
-    surf = image.load()
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/im.py", line 803, in load
-    raise e
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/im.py", line 768, in load
-    surf = renpy.display.pgrender.load_image(f, filename)
-  File "/Users/taeyunroh/Documents/renpy-8.1.1-sdk/renpy/display/pgrender.py", line 201, in load_image
-    raise Exception("Could not load image {!r}{}: {!r}".format(filename, extra, e))
-Exception: Could not load image 'images/ciga2.png': error('Unsupported image format')
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\display\core.py", line 4099, in interact_core
+    renpy.audio.audio.interact()
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\audio\audio.py", line 1269, in interact
+    periodic()
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\audio\audio.py", line 1222, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\audio\audio.py", line 1200, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\audio\audio.py", line 1142, in periodic_pass
+    c.periodic()
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "C:\Users\uSER\renpy-8.1.1-sdk\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'lighthappy.mp3'.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.1.23060707
 kaistmossolescape 1.0
-Wed Jul 19 14:59:55 2023
+Wed Jul 19 16:04:23 2023
