@@ -127,7 +127,7 @@ image heart:
     "images/heart.png"
 image mstc_fail:
     "images/fail_to_mstc.jpg"
-    zoom 1.5
+    zoom 3.0
 image ciga:
     "images/ciga.png"
     zoom 0.3
@@ -331,7 +331,7 @@ label scene4:   # 첫날, 강의실 안.
         label .scene4_1_a:
             stop music
             j "나 사실 학점 1.27이야. 학고 받고 집에서 쫓겨나서 몰입캠프 온거야."
-            j "비록 사실이라도 말을 그딴식으로 하는 사람이랑 나는 일주일 동안 같이 못 지낼 거 같아."
+            j "비록 사실이라도 말을 그딴식으로 하는 사람이랑 \n 나는 일주일 동안 같이 못 지낼 거 같아."
             j "넌 탈락이야!"
 
             play music "spooky&sad.mp3"
@@ -660,7 +660,7 @@ label scene8:
 
 label scene8_a:
     stop music
-    show Hitomi m_08
+    show Hitomi m_01
     with dissolve
     h "그녀가 뒤돌아 본다."
 
